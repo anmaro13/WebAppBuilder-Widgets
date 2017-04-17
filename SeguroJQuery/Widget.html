@@ -1,0 +1,297 @@
+
+<div class="container">
+  <form class="well form-horizontal" method="post" id="seguro_form">
+            <fieldset>
+
+              <!-- Form Name -->
+
+              <legend class="col-md-8 tittle">Calculo del Seguro de Hogar</legend>
+
+              <!-- Año de Poliza-->
+
+              <div class="form-group">
+                <label class="col-md-6 control-label">Año de comienzo de la póliza</label>
+                  <div class="col-md-6 selectContainer">
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                  <select name="poliza" id ="anio" class="form-control selectpicker" >
+                    <option value=" " >Selecciona un año</option>
+                    <option value= "2015">2015</option>
+                    <option value = "2016">2016</option>
+                    <option value= "2017">2017</option>
+                  </select>
+                </div>
+              </div>
+              </div>
+
+              <!-- Tipo de edificio-->
+
+              <div class="form-group">
+                <label class="col-md-6 control-label">Tipo de edificio</label>
+                  <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="edificio" id="edificio" class="form-control selectpicker" >
+                      <option value=" " >Selecciona un tipo de edificio</option>
+                      <option value="Piso/Apartamento">Piso o Apartamento</option>
+                      <option value="Vivienda Unifamiliar">Vivienda Unifamiliar</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Año construccion-->
+
+              <div class="form-group">
+                  <label class="col-md-6 control-label">Año de construcción</label>
+                    <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input name="anio" id = "construccion" placeholder="Introduce un año" class="form-control" type="text">
+                    </div>
+                  </div>
+                </div>
+
+              <!-- Superficie-->
+
+              <div class="form-group">
+                  <label class="col-md-6 control-label">Superficie de la vivienda</label>
+                    <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                  <input name="superficie" id = "superficie" placeholder="Introduce los m2" class="form-control" type="text">
+                    </div>
+                  </div>
+                </div>
+
+              <!-- Peligrosidad-->
+
+              <div class="form-group">
+                  <label class="col-md-6 control-label">Peligrosidad</label>
+                  <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="peligrosidad" id="peligrosidad" class="form-control selectpicker" >
+                      <option value=" " >Selecciona una peligrosidad</option>
+                      <option value= "Baja">Baja</option>
+                      <option value= "Baja-Media">Baja-Media</option>
+                      <option value= "Media">Media</option>
+                      <option value ="Media-Alta">Media-Alta</option>
+                      <option value = "Alta">Alta</option>
+                      <option value = "Muy Alta">Muy Alta</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tipo de material-->
+
+              <div class="form-group">
+                    <label class="col-md-6 control-label">Tipo de material</label>
+                    <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                      <select name="material" id = "material" class="form-control selectpicker" >
+                        <option value=" " >Selecciona un tipo de material</option>
+                        <option value= "Ladrillo con efecto diafragma">Ladrillo con efecto diafragma</option>
+                        <option value= "Ladrillo sin efecto diafragma">Ladrillo sin efecto diafragma</option>
+                        <option value= "Mamposteria">Mampostería</option>
+                        <option value= "Porticos de Hormigon Armado CON diseño sismorresistente">Porticos de Hormigon Armado con diseño sismorresistente</option>
+                        <option value= "Porticos de Hormigon Armado SIN diseño sismorresistente">Porticos de Hormigon Armado sin diseño sismorresistente</option>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- Numero de pisos-->
+
+              <div class="form-group">
+                    <label class="col-md-6 control-label">Número de pisos</label>
+                      <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                          <input name="pisos" id="pisos" placeholder="Introduce los número de pisos" class="form-control" type="text">
+                      </div>
+                    </div>
+                  </div>
+
+              <!-- Valor de mercado-->
+
+              <div class="form-group">
+                <label class="col-md-6 control-label">Valor de mercado</label>
+                  <div class="col-md-6 inputGroupContainer">
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
+                      <input name="valor" id="mercado" placeholder="Introduce un valor" class="form-control" type="text">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Deductible-->
+
+              <div class="form-group">
+                  <label class="col-md-6 control-label">Deductible</label>
+                  <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="deductible" id = "deductible" class="form-control selectpicker" >
+                      <option value=" " >Selecciona un porcentaje</option>
+                      <option value = "5%">5%</option>
+                      <option value = "10%">10%</option>
+                      <option value = "15%">15%</option>
+                      <option value = "20%">20%</option>
+                      <option value = "25%">25%</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cobertura objetos fragiles -->
+
+              <div class="form-group">
+                      <div>
+                        <label class="col-md-6 control-label">¿Cobertura de objetos frágiles?</label>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="objetos" id="objetos" value="true" /> Si
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="objetos" id ="objetos1" value="false" /> No
+                              </label>
+                          </div>
+                        </div>
+                </div>
+
+              <!-- Cobertura de bienes personales -->
+
+               <div class="form-group">
+                  <label class="col-md-6 control-label">¿Cobertura de bienes personales?</label>
+                  <div class="col-md-6">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="bienes" id="bienes" value="true" /> Si
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="bienes" id="bienes1" value="false" /> No
+                        </label>
+                    </div>
+                  </div>
+               </div>
+
+              <!-- Valor de bienes personales-->
+
+              <div class="form-group">
+                <label class="col-md-6 control-label">Valor de bienes personales</label>
+                <div class="col-md-6 inputGroupContainer">
+                <div class="input-group">
+                   <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                <select name="personales" class="form-control selectpicker" id="coberturebienes" disabled  >
+                 <option value=" " >Selecciona un valor</option>
+                 <option value="5000">5.000€</option>
+                 <option value="10000">10.000€</option>
+                 <option value="15000">15.000€</option>
+                 <option value="20000">20.000€</option>
+                 <option value="25000">25.000€</option>
+                </select>
+                </div>
+                </div>
+              </div>
+
+              <!-- Cobertura de inhabitabilidad temporal -->
+              <div class="form-group">
+                <label class="col-md-6 control-label">¿Cobertura por inhabitabilidad temporal?</label>
+                <div class="col-md-6">
+                  <div class="radio">
+                      <label>
+                          <input type="radio" name="inhabitabilidad" id = "temporal" value="true" /> Si
+                      </label>
+                  </div>
+                  <div class="radio">
+                      <label>
+                          <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" /> No
+                      </label>
+                  </div>
+                </div>
+               </div>
+
+              <!-- Valor de inhabitabilidad temporal-->
+
+              <div class="form-group">
+                <label class="col-md-6 control-label">Valor de inhabitabilidad temporal</label>
+                <div class="col-md-6 inputGroupContainer">
+                <div class="input-group">
+                   <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                <select name="temporal" class="form-control selectpicker" id="coberturetemporal" disabled>
+                 <option value=" " >Selecciona un valor</option>
+                 <option value="1000">1.000€</option>
+                 <option value="5000">5.000€</option>
+                 <option value="10000">10.000€</option>
+                 <option value="20000">20.000€</option>
+                </select>
+                </div>
+              </div>
+              </div>
+
+              <!-- Cliente-->
+              <div class="form-group">
+                  <label class="col-md-6 control-label">¿Es cliente nuestro?</label>
+                  <div class="col-md-6">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="cliente" id = "cliente" value="true" /> Si
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="cliente" id="cliente1" value="false" /> No
+                        </label>
+                      </div>
+                  </div>
+                </div>
+
+              <!-- Tipo de seguro -->
+              <div class="form-group">
+                    <label class="col-md-6 control-label">Tipo de Seguro contratado por el cliente</label>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input name ="vida" type="radio" value="true" id="insurance1" disabled>Seguro de Vida</label>
+                        </div>
+                        <div class="radio">
+                            <label><input name = "auto" type="radio" value="true" id="insurance2" disabled>Seguro de Automóvil</label>
+                        </div>
+                        <div class="radio">
+                            <label><input name="decesos" type="radio" value="true" id="insurance3" disabled>Seguro de Decesos</label>
+                        </div>
+                    </div>
+
+                </div>
+
+              <!-- Button -->
+              <div class="form-group">
+                <div class="containerTitle">
+
+                <label class="col-md-6 control-label">
+                <div>
+                  <img  class ="image" src="images/logo.png">
+                </div></label>
+                <div class="col-md-6">
+                  <button type="submit" class="btn btn-primary" data-dojo-attach-event="onclick:calcularseguro"><span class="glyphicon glyphicon-play-circle"></span> Ejecutar </button>
+                </div>
+
+                </div>
+              </div>
+
+
+
+            </fieldset>
+          </form>
+          <div id="legendDiv" ></div>
+          <span id="status" ></span>
+          <div id="controls"></div>
+</div>
