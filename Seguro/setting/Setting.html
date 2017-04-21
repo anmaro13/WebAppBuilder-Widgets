@@ -3,8 +3,7 @@
             <fieldset class="well-left form-horizontal">
               <div class="form-group">
                 <div class="collapse">
-                    <button class= "panelbody" data-dojo-type="dijit/form/Button" data-dojo-props="title: 'Descripción'" type="button">Descripción</button>
-
+                    <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Descripcion" data-dojo-props="title: 'Descripción'" type="button">Descripción</button>
                     <div class="panelbody" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Entrada'">
                       <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Anio">
                         <label class= "control-label">Año de comienzo de la póliza</label>
@@ -12,42 +11,44 @@
                       <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
                         <label class= "control-label">Tipo de Edificio</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Construccion">
                         <label class= "control-label">Año de construcción</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Superficie">
                         <label class= "control-label">Superficie de la vivienda</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Peligrosidad">
                         <label class= "control-label">Peligrosidad</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Material">
                         <label class= "control-label">Tipo de material</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Pisos">
                         <label class= "control-label">Número de pisos</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Mercado">
                         <label class= "control-label">Valor de mercado</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Deductible">
                         <label class= "control-label">Deductible</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Objetos">
                         <label class= "control-label">Cobertura de objetos frágiles</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Personales">
                         <label class= "control-label">Cobertura de bienes personales</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Temporal">
                         <label class= "control-label">Cobertura por inhabitabilidad temporal</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button id="cliente" class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Cliente">
                         <label class= "control-label">Cliente</label>
                       </button>
                     </div>
                     <div class = "panelbody" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Salida'">
-
+                      <button id="salida" class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Salida">
+                        <label class= "control-label">Capa de Salida</label>
+                      </button>
                     </div>
                     <div class= "panelbody" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Opciones'">
 
@@ -84,11 +85,11 @@
                           <input  id= "informacion" value= "Año comienzo de la Póliza" class="form-control" type="text">
                       </div>
                   </div>
-                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <label id="predeterminado" class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
-                      <div class="input-group" id="contenido">
-                      </div>
+                      <div class="input-group" id="contenido"></div>
                   </div>
+                  <div id="valores"></div>
               </div>
 
 

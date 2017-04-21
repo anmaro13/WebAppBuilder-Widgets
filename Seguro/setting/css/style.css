@@ -64,7 +64,7 @@ legend {
     background-color: #f8f8f8;
     border-color: #ccc;
     padding: 10px 15px;
-    width: 300px;
+    width: 310px;
 }
 
 .panelbody {
@@ -190,6 +190,14 @@ label.col-md-6{
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#cliente  {
+  margin-bottom: 0px;
+}
+
+#salida {
+  margin-bottom: 0px;
 }
 
 .btn-primary:hover {
