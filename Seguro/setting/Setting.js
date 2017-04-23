@@ -33,6 +33,7 @@ define([
 
       onClick_Anio: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
@@ -44,6 +45,7 @@ define([
 
       onClick_Edificio: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
@@ -59,6 +61,7 @@ define([
 
       onClick_Construccion: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
@@ -72,6 +75,7 @@ define([
 
       onClick_Superficie: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
@@ -85,6 +89,7 @@ define([
 
       onClick_Peligrosidad: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
@@ -106,6 +111,7 @@ define([
 
       onClick_Material: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
@@ -126,6 +132,7 @@ define([
 
       onClick_Pisos: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
@@ -139,6 +146,7 @@ define([
 
       onClick_Mercado: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
@@ -152,6 +160,7 @@ define([
 
       onClick_Deductible: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
@@ -171,9 +180,13 @@ define([
 
       onClick_Objetos: function() {
         domUtils.hide(dom.byId('descripcion'));
-        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('predeterminado'));
+        var visibilidad = dom.byId("visibilidad");
+        visibilidad.innerHTML='<label class="col-md-6 control-label">Visible: </label>'+
+        '<div class="col-md-6 inputGroupContainer">'+'<div class="input-group" id="visible"></div>'+
+        '</div>';
         var contenido = dom.byId("contenido");
         contenido.innerHTML = '<div class="radio-inline">'+
         '<label><input type="radio" name="objetos" id="objetos" value="true" /> Si</label>'+
@@ -185,15 +198,28 @@ define([
         etiqueta.value = "Cobertura de Objetos";
         var informacion = dom.byId("informacion");
         informacion.value = "Cobertura de Objetos";
+        var visible = dom.byId("visible");
+        visible.innerHTML =
+        '<div class="onoffswitch">' +
+        '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>'+
+        '<label class="onoffswitch-label" for="myonoffswitch">'+
+        '<span class="onoffswitch-inner"></span>'+
+        '<span class="onoffswitch-switch"></span>'+
+        '</label></div>';
       },
 
       onClick_Personales: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.show(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var valores = dom.byId("valores");
         valores.innerHTML='<label class="col-md-6 control-label">Valor de la cobertura: </label>'+
         '<div class="col-md-6 inputGroupContainer">'+'<div class="input-group" id="valores2"></div>'+
+        '</div>';
+        var visibilidad = dom.byId("visibilidad");
+        visibilidad.innerHTML='<label class="col-md-6 control-label">Visible: </label>'+
+        '<div class="col-md-6 inputGroupContainer">'+'<div class="input-group" id="visible"></div>'+
         '</div>';
         var contenido = dom.byId("contenido");
         contenido.innerHTML = '<div class="radio-inline">'+
@@ -214,6 +240,14 @@ define([
         etiqueta.value = "Cobertura de bienes personales";
         var informacion = dom.byId("informacion");
         informacion.value = "Cobertura de bienes personales";
+        var visible = dom.byId("visible");
+        visible.innerHTML =
+        '<div class="onoffswitch">' +
+        '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>'+
+        '<label class="onoffswitch-label" for="myonoffswitch">'+
+        '<span class="onoffswitch-inner"></span>'+
+        '<span class="onoffswitch-switch"></span>'+
+        '</label></div>';
         console.log(registry.byId("bienes"));
         registry.byId("bienes").on("change", function(isChecked){
               if(isChecked){
@@ -229,12 +263,15 @@ define([
 
       },
 
-
-
       onClick_Temporal: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.show(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
+        var visibilidad = dom.byId("visibilidad");
+        visibilidad.innerHTML='<label class="col-md-6 control-label">Visible: </label>'+
+        '<div class="col-md-6 inputGroupContainer">'+'<div class="input-group" id="visible"></div>'+
+        '</div>';
         var valores = dom.byId("valores");
         valores.innerHTML='<label class="col-md-6 control-label">Valor de la cobertura: </label>'+
         '<div class="col-md-6 inputGroupContainer">'+'<div class="input-group" id="valores2"></div>'+
@@ -257,11 +294,20 @@ define([
         etiqueta.value = "Cobertura por inhabitabilidad temporal";
         var informacion = dom.byId("informacion");
         informacion.value = "Cobertura por inhabitabilidad temporal";
+        var visible = dom.byId("visible");
+        visible.innerHTML =
+        '<div class="onoffswitch">' +
+        '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>'+
+        '<label class="onoffswitch-label" for="myonoffswitch">'+
+        '<span class="onoffswitch-inner"></span>'+
+        '<span class="onoffswitch-switch"></span>'+
+        '</label></div>';
       },
 
       onClick_Cliente: function() {
         domUtils.hide(dom.byId('descripcion'));
         domUtils.hide(dom.byId('valores'));
+        domUtils.hide(dom.byId('visibilidad'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");

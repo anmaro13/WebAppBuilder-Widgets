@@ -5,31 +5,31 @@
                 <div class="collapse">
                     <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Descripcion" data-dojo-props="title: 'Descripción'" type="button">Descripción</button>
                     <div class="panelbody" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Entrada'">
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Anio">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Anio">
                         <label class= "control-label">Año de comienzo de la póliza</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Edificio">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Edificio">
                         <label class= "control-label">Tipo de Edificio</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Construccion">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Construccion">
                         <label class= "control-label">Año de construcción</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Superficie">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Superficie">
                         <label class= "control-label">Superficie de la vivienda</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Peligrosidad">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Peligrosidad">
                         <label class= "control-label">Peligrosidad</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Material">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Material">
                         <label class= "control-label">Tipo de material</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Pisos">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Pisos">
                         <label class= "control-label">Número de pisos</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Mercado">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Mercado">
                         <label class= "control-label">Valor de mercado</label>
                       </button>
-                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Deductible">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Deductible">
                         <label class= "control-label">Deductible</label>
                       </button>
                       <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Objetos">
@@ -41,7 +41,7 @@
                       <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Temporal">
                         <label class= "control-label">Cobertura por inhabitabilidad temporal</label>
                       </button>
-                      <button id="cliente" class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Cliente">
+                      <button id="cliente" class="btn obli" data-dojo-attach-event="onclick: onClick_Cliente">
                         <label class= "control-label">Cliente</label>
                       </button>
                     </div>
@@ -55,7 +55,6 @@
                     </div>
                 </div>
               </div>
-
 
             </fieldset>
 
@@ -85,14 +84,14 @@
                           <input  id= "informacion" value= "Año comienzo de la Póliza" class="form-control" type="text">
                       </div>
                   </div>
+                  <div id="visibilidad"></div>
                   <label id="predeterminado" class="col-md-6 control-label">Valor Predeterminado: </label>
-                  <div class="col-md-6 inputGroupContainer">
+                  <div class="col-md-6 inputGroupContainer" id="style">
                       <div class="input-group" id="contenido"></div>
                   </div>
                   <div id="valores"></div>
+
               </div>
-
-
 
               <div class="form-group">
                 <div>
@@ -102,7 +101,5 @@
 
 
             </fieldset>
-
-
 
 </div>
