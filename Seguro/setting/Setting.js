@@ -2,7 +2,9 @@
 
 define([
     'dojo/_base/declare',
+    "dijit/registry",
       "dojo/dom",
+      "dojo/on",
       "esri/domUtils",
     'dijit/_WidgetsInTemplateMixin',
     'jimu/BaseWidgetSetting',
@@ -12,7 +14,7 @@ define([
     'dijit/form/CheckBox'
   ],
   function(
-    declare, dom, domUtils,
+    declare, registry, dom, on, domUtils,
     _WidgetsInTemplateMixin,
     BaseWidgetSetting) {
     return declare([BaseWidgetSetting, _WidgetsInTemplateMixin], {
@@ -31,16 +33,18 @@ define([
 
       onClick_Anio: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
-        contenido.innerHTML = '<select class="form-control selectpicker" >' +
+        contenido.innerHTML = '<select class="form-control selectpicker" id="anio1">' +
         '<option>Selecciona un año</option>' + '<option>2015</option>' + '<option>2016</option>' +
         '<option>2017</option>' + '</select>';
       },
 
       onClick_Edificio: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
@@ -55,6 +59,7 @@ define([
 
       onClick_Construccion: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
@@ -67,6 +72,7 @@ define([
 
       onClick_Superficie: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
@@ -79,6 +85,7 @@ define([
 
       onClick_Peligrosidad: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
@@ -99,6 +106,7 @@ define([
 
       onClick_Material: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
@@ -118,6 +126,7 @@ define([
 
       onClick_Pisos: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
@@ -130,6 +139,7 @@ define([
 
       onClick_Mercado: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
@@ -142,6 +152,7 @@ define([
 
       onClick_Deductible: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
@@ -160,6 +171,7 @@ define([
 
       onClick_Objetos: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");
@@ -185,13 +197,13 @@ define([
         '</div>';
         var contenido = dom.byId("contenido");
         contenido.innerHTML = '<div class="radio-inline">'+
-        '<label><input type="radio" name="bienes" id="bienes" value="true" /> Si</label>'+
+        '<label><input type="radio" name="bienes" id="bienes" value="true" checked data-dojo-type="dijit/form/RadioButton"/> Si</label>'+
         '</div>'+
         '<div class="radio-inline">'+
-        '<label><input type="radio" name="bienes" id="bienes1" value="false" /> No</label>'+
+        '<label><input type="radio" name="bienes" id="bienes1" value="false" data-dojo-type="dijit/form/RadioButton"/> No</label>'+
         '</div>';
         var valores2 = dom.byId("valores2");
-        valores2.innerHTML = '<select name="personales" class="form-control selectpicker" id="coberturebienes">'+
+        valores2.innerHTML = '<select name="personales" class="form-control selectpicker" id="coberturebienes" disabled>'+
         '<option value="" >Selecciona un valor</option>'+
         '<option value="5000">5.000€</option>'+
         '<option value="10000">10.000€</option>'+
@@ -202,7 +214,22 @@ define([
         etiqueta.value = "Cobertura de bienes personales";
         var informacion = dom.byId("informacion");
         informacion.value = "Cobertura de bienes personales";
+        console.log(registry.byId("bienes"));
+        registry.byId("bienes").on("change", function(isChecked){
+              if(isChecked){
+                  document.getElementById("coberturebienes").removeAttribute('disabled');
+              }
+          }, true);
+
+        registry.byId("bienes1").on("change", function(isChecked){
+              if(isChecked){
+                  document.getElementById("coberturebienes").setAttribute('disabled');
+              }
+          }, true);
+
       },
+
+
 
       onClick_Temporal: function() {
         domUtils.hide(dom.byId('descripcion'));
@@ -234,6 +261,7 @@ define([
 
       onClick_Cliente: function() {
         domUtils.hide(dom.byId('descripcion'));
+        domUtils.hide(dom.byId('valores'));
         domUtils.show(dom.byId('parametros'));
         domUtils.show(dom.byId('predeterminado'));
         var contenido = dom.byId("contenido");

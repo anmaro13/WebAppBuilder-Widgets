@@ -112,6 +112,15 @@ float: left;
 
 }
 
+.radio-inline, .checkbox-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: 400;
+    cursor: pointer;
+}
+
 label.col-md-6{
   text-align: left;
   width: 32%;
