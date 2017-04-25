@@ -26,6 +26,8 @@
 
 .well-left {
     width: 300px;
+    max-height: 435px;
+    overflow: auto;
     position: absolute;
     min-height: 20px;
     padding: 19px;
@@ -39,7 +41,7 @@
 
 .well-right {
     width:600px;
-    margin-left: 330px;
+    margin-left: 350px;
     min-height: 20px;
     padding: 19px;
     margin-bottom: 20px;
@@ -65,13 +67,42 @@ legend {
     border-color: #ccc;
     padding: 10px 15px;
     width: 310px;
+    height: 500px;
 }
 
-.panelbody {
+h4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  color: rgba(0,157,0,0.56);
+  font-family: 'opensans-bold', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 6px;
+}
+
+p {
+  font: 15px/25px 'opensans-light', sans-serif;
+  margin-left: 10px;
+}
+
+#dijit_TitlePane_1_titleBarNode {
     color: #595959;
     background-color: #f8f8f8;
     border-color: #ccc;
 }
+
+#dijit_TitlePane_0_titleBarNode {
+    color: #595959;
+    background-color: #f8f8f8;
+    border-color: #ccc;
+}
+
 legend {
     display: block;
     width: 100%;
@@ -268,9 +299,7 @@ label.col-md-6{
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
-.onoffswitch-checkbox {
-    display: none;
-}
+
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
     border: 2px solid #999999; border-radius: 20px;

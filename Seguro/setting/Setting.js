@@ -1,6 +1,7 @@
 
 
 define([
+    "dojo/parser",
     'dojo/_base/declare',
     "dijit/registry",
       "dojo/dom",
@@ -14,7 +15,7 @@ define([
     'dijit/form/CheckBox'
   ],
   function(
-    declare, registry, dom, on, domUtils,
+    parser, declare, registry, dom, on, domUtils,
     _WidgetsInTemplateMixin,
     BaseWidgetSetting) {
     return declare([BaseWidgetSetting, _WidgetsInTemplateMixin], {
@@ -23,6 +24,7 @@ define([
 
       startup: function() {
       domUtils.hide(dom.byId('parametros'));
+      parser.parse();
       },
 
       onClick_Descripcion: function() {
@@ -249,7 +251,7 @@ define([
         '<span class="onoffswitch-switch"></span>'+
         '</label></div>';
         console.log(registry.byId("bienes"));
-        registry.byId("bienes").on("change", function(isChecked){
+        /*registry.byId("bienes").on("change", function(isChecked){
               if(isChecked){
                   document.getElementById("coberturebienes").removeAttribute('disabled');
               }
@@ -259,7 +261,7 @@ define([
               if(isChecked){
                   document.getElementById("coberturebienes").setAttribute('disabled');
               }
-          }, true);
+          }, true);*/
 
       },
 
