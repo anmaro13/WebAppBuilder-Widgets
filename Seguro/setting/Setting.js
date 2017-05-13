@@ -2,13 +2,13 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
   return declare([BaseWidgetSetting, _WidgetsInTemplateMixin], {
     // Declaramos la clase CSS para los estilos
     baseClass: 'jimu-widget-heatmap-setting',
-    _counters:{},
+    _counters: {},
 
-    startup: function() {
+    startup: function startup() {
       domUtils.hide(dom.byId('parametros'));
       this.inherited(arguments);
       var config = this.config;
-        // if config doesnt exisist we create it
+      // if config doesnt exisist we create it
       /*if(config === null){
         if (config.inPanelVar === null){
         config.inPanelVar = {};
@@ -22,28 +22,28 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
     },
 
     // On open widget config
-    setConfig: function(config) {
+    setConfig: function setConfig(config) {
       this.config = config;
       // Load service URL if exisits
       if (this.config.anio) {
-        this.anio.set('value',this.config.anio);
+        //this.anio.set('value',this.config.anio);
       }
       return this.config;
     },
 
-    getConfig: function() {
-        var options = this.config.params;
-        options.anio = this.anio.get("value");
-        return this.config;
+    getConfig: function getConfig() {
+      var options = this.config.params;
+      //options.anio = this.anio.get("value");
+      return this.config;
     },
 
-    onClick_Descripcion: function() {
+    onClick_Descripcion: function onClick_Descripcion() {
       domUtils.show(dom.byId('descripcion'));
       domUtils.hide(dom.byId('parametros'));
       domUtils.hide(dom.byId('predeterminado'));
     },
 
-    onClick_Anio: function() {
+    onClick_Anio: function onClick_Anio() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('visibilidad'));
       domUtils.hide(dom.byId('valores'));
@@ -53,7 +53,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       contenido.innerHTML = '<option>Selecciona un año</option>' + '<option>2015</option>' + '<option>2016</option>' + '<option>2017</option>';
     },
 
-    onClick_Edificio: function() {
+    onClick_Edificio: function onClick_Edificio() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('visibilidad'));
       domUtils.hide(dom.byId('valores'));
@@ -67,7 +67,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       informacion.value = "Tipo de Edificio";
     },
 
-    onClick_Construccion: function() {
+    onClick_Construccion: function onClick_Construccion() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('visibilidad'));
       domUtils.hide(dom.byId('valores'));
@@ -81,7 +81,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       informacion.value = "Año de construcción";
     },
 
-    onClick_Superficie: function() {
+    onClick_Superficie: function onClick_Superficie() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('visibilidad'));
       domUtils.hide(dom.byId('valores'));
@@ -95,7 +95,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       informacion.value = "Superficie de la vivienda";
     },
 
-    onClick_Peligrosidad: function() {
+    onClick_Peligrosidad: function onClick_Peligrosidad() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('visibilidad'));
       domUtils.hide(dom.byId('valores'));
@@ -109,7 +109,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       informacion.value = "Peligrosidad";
     },
 
-    onClick_Material: function() {
+    onClick_Material: function onClick_Material() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('visibilidad'));
       domUtils.hide(dom.byId('valores'));
@@ -123,7 +123,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       informacion.value = "Tipo Material";
     },
 
-    onClick_Pisos: function() {
+    onClick_Pisos: function onClick_Pisos() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('visibilidad'));
       domUtils.hide(dom.byId('valores'));
@@ -137,7 +137,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       informacion.value = "Número de pisos";
     },
 
-    onClick_Mercado: function() {
+    onClick_Mercado: function onClick_Mercado() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('visibilidad'));
       domUtils.hide(dom.byId('valores'));
@@ -151,7 +151,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       informacion.value = "Valor de Mercado";
     },
 
-    onClick_Deductible: function() {
+    onClick_Deductible: function onClick_Deductible() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('visibilidad'));
       domUtils.hide(dom.byId('valores'));
@@ -165,7 +165,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       informacion.value = "Deductible";
     },
 
-    onClick_Objetos: function() {
+    onClick_Objetos: function onClick_Objetos() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.show(dom.byId('parametros'));
       domUtils.hide(dom.byId('valores'));
@@ -182,7 +182,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       visible.innerHTML = '<div class="onoffswitch">' + '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>' + '<label class="onoffswitch-label" for="myonoffswitch">' + '<span class="onoffswitch-inner"></span>' + '<span class="onoffswitch-switch"></span>' + '</label></div>';
     },
 
-    onClick_Personales: function() {
+    onClick_Personales: function onClick_Personales() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.show(dom.byId('valores'));
       domUtils.show(dom.byId('parametros'));
@@ -214,7 +214,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
         }, true);*/
     },
 
-    onClick_Temporal: function() {
+    onClick_Temporal: function onClick_Temporal() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.show(dom.byId('valores'));
       domUtils.show(dom.byId('parametros'));
@@ -235,7 +235,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       visible.innerHTML = '<div class="onoffswitch">' + '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>' + '<label class="onoffswitch-label" for="myonoffswitch">' + '<span class="onoffswitch-inner"></span>' + '<span class="onoffswitch-switch"></span>' + '</label></div>';
     },
 
-    onClick_Cliente: function() {
+    onClick_Cliente: function onClick_Cliente() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.hide(dom.byId('valores'));
       domUtils.hide(dom.byId('visibilidad'));
@@ -249,7 +249,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       informacion.value = "Cliente";
     },
 
-    onClick_Salida: function() {
+    onClick_Salida: function onClick_Salida() {
       domUtils.hide(dom.byId('descripcion'));
       domUtils.show(dom.byId('parametros'));
       var etiqueta = dom.byId("etiqueta");

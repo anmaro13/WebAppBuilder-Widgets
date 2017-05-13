@@ -1,130 +1,118 @@
-.jimu-widget-seguro{
+.jimu-widget-seguro {
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
-#success_message{ display: none;}
+#interface2 {
+  display: none; }
 
 .btn-primary {
-  background-color:rgba(0,157,0,0.56);
+  background-color: rgba(0, 157, 0, 0.56);
   border-color: #4c4c4c;
-  background-image: linear-gradient(to bottom,rgba(0,157,0,0.56) 0,rgba(0,157,0,0.56) 100%);
-}
+  background-image: linear-gradient(to bottom, rgba(0, 157, 0, 0.56) 0, rgba(0, 157, 0, 0.56) 100%); }
 
-.btn-primary:hover{
-  background-color:rgba(0,157,0,0.31);
-  border-color: #4c4c4c
-}
+.btn-primary:hover {
+  background-color: rgba(0, 157, 0, 0.31);
+  border-color: #4c4c4c; }
 
-.image{
+.image {
   width: 129px;
   float: right;
-  top: 12px;
+  top: 12px; }
 
-}
+legend {
+  color: rgba(0, 157, 0, 0.56);
+  font-weight: bold; }
 
-legend{
-  color:rgba(0,157,0,0.56);
-  font-weight: bold;
-}
+.button {
+  margin-left: 30px; }
 
-.button{
-  margin-left: 30px
-}
-
-.containerTitle{
+.containerTitle {
   width: 100%;
-  height: 70px;
-}
+  height: 70px; }
 
-.tittle{
-  width: 100%;
-}
+.tittle {
+  width: 100%; }
 
-.containerLegend{
+.containerLegend {
   width: 50%;
   height: 70px;
   float: left;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-.containerLogo{
+.containerLogo {
   float: left;
   width: 50%;
-  height: 50px;
-}
+  height: 50px; }
 
-h5 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
+h5 {
+  margin: 0 0 5px 0;
+  border-bottom: 1px solid #444; }
+
 .shadow {
   -moz-box-shadow: 0 0 5px #888;
   -webkit-box-shadow: 0 0 5px #888;
-  box-shadow: 0 0 5px #888;
-}
+  box-shadow: 0 0 5px #888; }
 
-
-.comienzo{
-  background-color:#d9edf7;
+.comienzo {
+  background-color: #d9edf7;
   text-align: center;
-  border-color:#bce8f1;
+  border-color: #bce8f1;
   color: #3a87ad;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  font-weight:bold;
+  font-weight: bold;
   padding: 3px;
   border: 1px solid transparent;
-  border-radius:4px;
-  display:block;
-  height:40px;
-}
+  border-radius: 4px;
+  display: block;
+  height: 40px; }
 
-.intermedio{
-  background-color:#fcf8e3;
+.intermedio {
+  background-color: #fcf8e3;
   text-align: center;
-  border-color:#faebcc;
+  border-color: #faebcc;
   color: #c09853;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  font-weight:bold;
+  font-weight: bold;
   padding: 3px;
   border: 1px solid transparent;
-  border-radius:4px;
-  display:block;
-  height:40px;
-}
+  border-radius: 4px;
+  display: block;
+  height: 40px; }
 
-.error{
-  background-color:#f2dede;
+.error {
+  background-color: #f2dede;
   text-align: center;
-  border-color:#ebccd1;
+  border-color: #ebccd1;
   color: #b94a48;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  font-weight:bold;
+  font-weight: bold;
   padding: 3px;
   border: 1px solid transparent;
-  border-radius:4px;
-  display:block;
-  height:40px;
-}
+  border-radius: 4px;
+  display: block;
+  height: 40px; }
 
-.correcto{
-  background-color:#dff0d8;
+.correcto {
+  background-color: #dff0d8;
   text-align: center;
-  border-color:#d6e9c6;
+  border-color: #d6e9c6;
   color: #468847;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  font-weight:bold;
+  font-weight: bold;
   padding: 3px;
   border: 1px solid transparent;
-  border-radius:4px;
-  display:block;
-  height:40px;
-}
+  border-radius: 4px;
+  display: block;
+  height: 40px; }
+
 .controls {
   height: 80px;
   font-family: arial;
@@ -134,13 +122,12 @@ h5 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
   color: #444;
   left: 10px;
   text-align: center;
-  display:block;
+  display: block;
   -moz-box-shadow: 0 0 5px #888;
   -webkit-box-shadow: 0 0 5px #888;
-  box-shadow: 0 0 5px #888;
-}
+  box-shadow: 0 0 5px #888; }
 
-#legendDiv .esriLegendService{
+#legendDiv .esriLegendService {
   height: 80px;
   font-family: arial;
   bottom: 10px;
@@ -148,16 +135,16 @@ h5 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
   background: #fff;
   color: #444;
   left: 10px;
-  display:block;
+  display: block;
   -moz-box-shadow: 0 0 5px #888;
   -webkit-box-shadow: 0 0 5px #888;
-  box-shadow: 0 0 5px #888;
-}
+  box-shadow: 0 0 5px #888; }
 
-.label { display: inline-block; width: 140px; }
+.label {
+  display: inline-block;
+  width: 140px; }
 
+.controls h5 {
+  margin-bottom: 10px; }
 
-
-.controls h5{
-        margin-bottom: 10px;
-      }
+/*# sourceMappingURL=style.css.map */

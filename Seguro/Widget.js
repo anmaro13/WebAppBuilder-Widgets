@@ -5,7 +5,34 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
 
     baseClass: 'jimu-widget-seguro',
 
-    startup: function () {
+    change: function change() {
+      if (document.getElementById("interface1").style.display === "none") {
+        document.getElementById("interface1").style.display = "block";
+        document.getElementById("interface2").style.display = "none";
+      } else {
+        document.getElementById("interface1").style.display = "none";
+        document.getElementById("interface2").style.display = "block";
+      }
+    },
+
+    habilitar: function habilitar() {
+      var radioButtons = document.getElementsByName("bienes");
+      if (radioButtons[0].value === "true") {
+        if (radioButtons[0].checked) {
+          document.getElementById("coberturebienes").removeAttribute('disabled');
+        }
+      }
+      if (radioButtons[1].value === "false") {
+        if (radioButtons[1].checked) {
+          document.getElementById("coberturebienes").setAttribute('disabled', '');
+          $("#coberturebienes").val('0');
+        } else {
+          document.getElementById("coberturebienes").removeAttribute('disabled');
+        }
+      }
+    },
+
+    startup: function startup() {
       var gpServiceUrl = "https://localhost:6443/arcgis/rest/services/Aseguradora/GPSeguros/GPServer/ScriptEdificios";
       this.gp = new Geoprocessor(gpServiceUrl);
       window.$app = {
@@ -13,11 +40,10 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
         legend: this.legend,
         layer2: this.layer2
       };
-      dom.byId("anio").value = this.config.inPanelVar.params.anio;
+      //dom.byId("anio").value = this.config.inPanelVar.params.anio;
     },
 
-
-    calcularseguro: function() {
+    calcularseguro: function calcularseguro() {
       var anio = dom.byId("anio").value;
       var edificio = dom.byId("edificio").value;
       var construccion = dom.byId("construccion").value;
@@ -134,7 +160,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
       }
     },
 
-    gpJobComplete: function (jobinfo) {
+    gpJobComplete: function gpJobComplete(jobinfo) {
       console.log(jobinfo);
       //get the result map service layer and add to map
       window.$app.gp.getResultImageLayer(jobinfo.jobId, null, null, function (layer) {
@@ -180,7 +206,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
       });
     },
 
-    gpJobStatus: function (jobinfo) {
+    gpJobStatus: function gpJobStatus(jobinfo) {
       domUtils.show(dom.byId('status'));
       var jobstatus = '';
       var status = document.getElementById('status');
@@ -209,13 +235,13 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
       dom.byId('status').innerHTML = jobstatus;
     },
 
-    gpJobFailed: function(error) {
+    gpJobFailed: function gpJobFailed(error) {
       error = "Problemas técnicos, vuelve a intentarlo...";
       document.getElementById('status').className = "error";
       dom.byId('status').innerHTML = error;
     },
 
-    cleanup: function() {
+    cleanup: function cleanup() {
       //hide the legend and remove the existing hotspot layer
       domUtils.hide(dom.byId('legendDiv'));
       domUtils.hide(dom.byId('status'));
