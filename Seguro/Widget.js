@@ -15,7 +15,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
       }
     },
 
-    habilitar: function habilitar() {
+    bienes: function bienes() {
       var radioButtons = document.getElementsByName("bienes");
       if (radioButtons[0].value === "true") {
         if (radioButtons[0].checked) {
@@ -28,6 +28,47 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
           $("#coberturebienes").val('0');
         } else {
           document.getElementById("coberturebienes").removeAttribute('disabled');
+        }
+      }
+    },
+
+    temporal: function temporal() {
+      var radioButtons = document.getElementsByName("inhabitabilidad");
+      if (radioButtons[0].value === "true") {
+        if (radioButtons[0].checked) {
+          document.getElementById("coberturetemporal").removeAttribute('disabled');
+        }
+      }
+      if (radioButtons[1].value === "false") {
+        if (radioButtons[1].checked) {
+          document.getElementById("coberturetemporal").setAttribute('disabled', '');
+          $("#coberturetemporal").val('0');
+        } else {
+          document.getElementById("coberturetemporal").removeAttribute('disabled');
+        }
+      }
+    },
+
+    cliente: function cliente() {
+      var radioButtons = $('input[name=cliente]');
+      if (radioButtons[0].value === "true") {
+        if (radioButtons[0].checked) {
+          //Habilitamos
+          document.getElementById("insurance1").removeAttribute('disabled');
+          document.getElementById("insurance2").removeAttribute('disabled');
+          document.getElementById("insurance3").removeAttribute('disabled');
+        }
+      }
+      if (radioButtons[1].value === "false") {
+        if (radioButtons[1].checked) {
+          //Desabilitamos
+          document.getElementById("insurance1").setAttribute('disabled', '');
+          document.getElementById("insurance2").setAttribute('disabled', '');
+          document.getElementById("insurance3").setAttribute('disabled', '');
+          //Deschequeamos
+          $('#insurance1').prop('checked', false);
+          $('#insurance2').prop('checked', false);
+          $('#insurance3').prop('checked', false);
         }
       }
     },

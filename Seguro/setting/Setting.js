@@ -2,7 +2,64 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
   return declare([BaseWidgetSetting, _WidgetsInTemplateMixin], {
     // Declaramos la clase CSS para los estilos
     baseClass: 'jimu-widget-heatmap-setting',
-    _counters: {},
+
+    onClick_bienes: function onClick_bienes() {
+      var radioButtons = document.getElementsByName("bienes");
+      if (radioButtons[0].value === "true") {
+        if (radioButtons[0].checked) {
+          document.getElementById("coberturebienes").removeAttribute('disabled');
+        }
+      }
+      if (radioButtons[1].value === "false") {
+        if (radioButtons[1].checked) {
+          document.getElementById("coberturebienes").setAttribute('disabled', '');
+          $("#coberturebienes").val('0');
+        } else {
+          document.getElementById("coberturebienes").removeAttribute('disabled');
+        }
+      }
+    },
+
+    temporal: function temporal() {
+      var radioButtons = document.getElementsByName("inhabitabilidad");
+      if (radioButtons[0].value === "true") {
+        if (radioButtons[0].checked) {
+          document.getElementById("coberturetemporal").removeAttribute('disabled');
+        }
+      }
+      if (radioButtons[1].value === "false") {
+        if (radioButtons[1].checked) {
+          document.getElementById("coberturetemporal").setAttribute('disabled', '');
+          $("#coberturetemporal").val('0');
+        } else {
+          document.getElementById("coberturetemporal").removeAttribute('disabled');
+        }
+      }
+    },
+
+    cliente: function cliente() {
+      var radioButtons = $('input[name=cliente]');
+      if (radioButtons[0].value === "true") {
+        if (radioButtons[0].checked) {
+          //Habilitamos
+          document.getElementById("insurance1").removeAttribute('disabled');
+          document.getElementById("insurance2").removeAttribute('disabled');
+          document.getElementById("insurance3").removeAttribute('disabled');
+        }
+      }
+      if (radioButtons[1].value === "false") {
+        if (radioButtons[1].checked) {
+          //Desabilitamos
+          document.getElementById("insurance1").setAttribute('disabled', '');
+          document.getElementById("insurance2").setAttribute('disabled', '');
+          document.getElementById("insurance3").setAttribute('disabled', '');
+          //Deschequeamos
+          $('#insurance1').prop('checked', false);
+          $('#insurance2').prop('checked', false);
+          $('#insurance3').prop('checked', false);
+        }
+      }
+    },
 
     startup: function startup() {
       domUtils.hide(dom.byId('parametros'));
@@ -179,7 +236,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       var informacion = dom.byId("informacion");
       informacion.value = "Cobertura de Objetos";
       var visible = dom.byId("visible");
-      visible.innerHTML = '<div class="onoffswitch">' + '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>' + '<label class="onoffswitch-label" for="myonoffswitch">' + '<span class="onoffswitch-inner"></span>' + '<span class="onoffswitch-switch"></span>' + '</label></div>';
+      visible.innerHTML = '<div class="onoffswitch">' + '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked hidden>' + '<label class="onoffswitch-label" for="myonoffswitch">' + '<span class="onoffswitch-inner"></span>' + '<span class="onoffswitch-switch"></span>' + '</label></div>';
     },
 
     onClick_Personales: function onClick_Personales() {
@@ -192,7 +249,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       var visibilidad = dom.byId("visibilidad");
       visibilidad.innerHTML = '<label class="col-md-6 control-label">Visible: </label>' + '<div class="col-md-6 inputGroupContainer">' + '<div class="input-group" id="visible"></div>' + '</div>';
       var contenido = dom.byId("contenido");
-      contenido.innerHTML = '<div class="radio-inline">' + '<label><input type="radio" name="bienes" id="bienes" value="true" checked data-dojo-type="dijit/form/RadioButton"/> Si</label>' + '</div>' + '<div class="radio-inline">' + '<label><input type="radio" name="bienes" id="bienes1" value="false" data-dojo-type="dijit/form/RadioButton"/> No</label>' + '</div>';
+      contenido.innerHTML = '<div class="radio-inline">' + '<label><input type="radio" name="bienes" id="bienes" value="true" data-dojo-attach-event="onclick: onClick_bienes"/> Si</label>' + '</div>' + '<div class="radio-inline">' + '<label><input type="radio" name="bienes" id="bienes1" value="false" data-dojo-attach-event="onclick:bienes"/> No</label>' + '</div>';
       var valores2 = dom.byId("valores2");
       valores2.innerHTML = '<select name="personales" class="form-control selectpicker" id="coberturebienes" disabled>' + '<option value="" >Selecciona un valor</option>' + '<option value="5000">5.000€</option>' + '<option value="10000">10.000€</option>' + '<option value="15000">15.000€</option>' + '<option value="20000">20.000€</option>' + '<option value="25000">25.000€</option></select>';
       var etiqueta = dom.byId("etiqueta");
@@ -200,18 +257,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       var informacion = dom.byId("informacion");
       informacion.value = "Cobertura de bienes personales";
       var visible = dom.byId("visible");
-      visible.innerHTML = '<div class="onoffswitch">' + '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>' + '<label class="onoffswitch-label" for="myonoffswitch">' + '<span class="onoffswitch-inner"></span>' + '<span class="onoffswitch-switch"></span>' + '</label></div>';
-      console.log(registry.byId("bienes"));
-      /*registry.byId("bienes").on("change", function(isChecked){
-            if(isChecked){
-                document.getElementById("coberturebienes").removeAttribute('disabled');
-            }
-        }, true);
-       registry.byId("bienes1").on("change", function(isChecked){
-            if(isChecked){
-                document.getElementById("coberturebienes").setAttribute('disabled');
-            }
-        }, true);*/
+      visible.innerHTML = '<div class="onoffswitch">' + '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked hidden>' + '<label class="onoffswitch-label" for="myonoffswitch">' + '<span class="onoffswitch-inner"></span>' + '<span class="onoffswitch-switch"></span>' + '</label></div>';
     },
 
     onClick_Temporal: function onClick_Temporal() {
@@ -232,7 +278,7 @@ define(['dojo/_base/declare', "dijit/registry", "dojo/dom", "dojo/on", "esri/dom
       var informacion = dom.byId("informacion");
       informacion.value = "Cobertura por inhabitabilidad temporal";
       var visible = dom.byId("visible");
-      visible.innerHTML = '<div class="onoffswitch">' + '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>' + '<label class="onoffswitch-label" for="myonoffswitch">' + '<span class="onoffswitch-inner"></span>' + '<span class="onoffswitch-switch"></span>' + '</label></div>';
+      visible.innerHTML = '<div class="onoffswitch">' + '<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked hidden>' + '<label class="onoffswitch-label" for="myonoffswitch">' + '<span class="onoffswitch-inner"></span>' + '<span class="onoffswitch-switch"></span>' + '</label></div>';
     },
 
     onClick_Cliente: function onClick_Cliente() {

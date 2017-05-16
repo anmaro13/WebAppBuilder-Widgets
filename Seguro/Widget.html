@@ -199,12 +199,12 @@
                      <div class="col-md-6">
                        <div class="radio-inline">
                            <label>
-                               <input type="radio" name="bienes" id="bienes" value="true" data-dojo-attach-event="onclick:habilitar"/> Si
+                               <input type="radio" name="bienes" id="bienes" value="true" data-dojo-attach-event="onclick:bienes"/> Si
                            </label>
                        </div>
                        <div class="radio-inline">
                            <label>
-                               <input type="radio" name="bienes" id="bienes1" value="false" data-dojo-attach-event="onclick:habilitar"/> No
+                               <input type="radio" name="bienes" id="bienes1" value="false" data-dojo-attach-event="onclick:bienes"/> No
                            </label>
                        </div>
                      </div>
@@ -217,7 +217,7 @@
                     <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="personales" class="form-control selectpicker" id="coberturebienes">
+                    <select name="personales" class="form-control selectpicker" id="coberturebienes" disabled>
                      <option value="0" >Selecciona un valor</option>
                      <option value="5000">5.000€</option>
                      <option value="10000">10.000€</option>
@@ -236,12 +236,12 @@
                    <div class="col-md-6">
                      <div class="radio-inline">
                          <label>
-                             <input type="radio" name="inhabitabilidad" id = "temporal" value="true" /> Si
+                             <input type="radio" name="inhabitabilidad" id = "temporal" value="true" data-dojo-attach-event="onclick:temporal"/> Si
                          </label>
                      </div>
                      <div class="radio-inline">
                          <label>
-                             <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" /> No
+                             <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" data-dojo-attach-event="onclick:temporal"/> No
                          </label>
                      </div>
                    </div>
@@ -254,8 +254,8 @@
                     <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="temporal" class="form-control selectpicker" id="coberturetemporal">
-                     <option value="" >Selecciona un valor</option>
+                    <select name="temporal" class="form-control selectpicker" id="coberturetemporal" disabled>
+                     <option value="0" >Selecciona un valor</option>
                      <option value="1000">1.000€</option>
                      <option value="5000">5.000€</option>
                      <option value="10000">10.000€</option>
@@ -271,12 +271,12 @@
                     <div class="col-md-6">
                         <div class="radio-inline">
                           <label>
-                            <input type="radio" name="cliente" id = "cliente" value="true" /> Si
+                            <input type="radio" name="cliente" id = "cliente" value="true" data-dojo-attach-event="onclick:cliente"/> Si
                           </label>
                         </div>
                         <div class="radio-inline">
                           <label>
-                            <input type="radio" name="cliente" id="cliente1" value="false" /> No
+                            <input type="radio" name="cliente" id="cliente1" value="false" data-dojo-attach-event="onclick:cliente"/> No
                           </label>
                         </div>
                     </div>
@@ -287,13 +287,13 @@
                         <label class="col-md-6 control-label">Tipo de Seguro contratado por el cliente</label>
                         <div class="col-md-6">
                             <div class="checkbox">
-                                <label><input name ="vida" type="checkbox" id="insurance1">Seguro de Vida</label>
+                                <label><input name ="vida" type="checkbox" id="insurance1" disabled>Seguro de Vida</label>
                             </div>
                             <div class="checkbox">
-                                <label><input name = "auto" type="checkbox" id="insurance2">Seguro de Automóvil</label>
+                                <label><input name = "auto" type="checkbox" id="insurance2" disabled>Seguro de Automóvil</label>
                             </div>
                             <div class="checkbox">
-                                <label><input name="decesos" type="checkbox" id="insurance3">Seguro de Decesos</label>
+                                <label><input name="decesos" type="checkbox" id="insurance3" disabled>Seguro de Decesos</label>
                             </div>
                         </div>
 
@@ -305,9 +305,10 @@
 
                     <label class="col-md-6 control-label">
                     <div>
-                      <button id="before" class="btn btn-primary" data-dojo-attach-event="onclick:change"><span class="glyphicon glyphicon-play-circle"></span><a href="#interfaz1"></a> Anterior </button>
+                      <img  class ="image" src="images/logo1.png">
                     </div></label>
                     <div class="col-md-6">
+                      <button id="before" class="btn btn-primary" data-dojo-attach-event="onclick:change"><span class="glyphicon glyphicon-play-circle"></span><a href="#interfaz1"></a> Anterior </button>
                       <button id="hotspotButton" class="btn btn-primary" data-dojo-attach-event="onclick:calcularseguro"><span class="glyphicon glyphicon-play-circle"></span> Ejecutar </button>
                     </div>
 
