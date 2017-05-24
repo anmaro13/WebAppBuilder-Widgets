@@ -200,13 +200,13 @@ label.col-md-6 {
   -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
 
-#cliente {
+#Cliente {
   margin-bottom: 0px; }
 
 #salida {
   margin-bottom: 0px; }
 
-#style {
+.col-md-6 .inputGroupContainer {
   margin-bottom: 10px;
   margin-top: 10px; }
 
@@ -318,5 +318,51 @@ label.col-md-6 {
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px; }
+
+#interfacedescripcion {
+  display: block; }
+
+#interfaceanio {
+  display: none; }
+
+#interfaceedificio {
+  display: none; }
+
+#interfaceconstruccion {
+  display: none; }
+
+#interfacesuperficie {
+  display: none; }
+
+#interfacepeligrosidad {
+  display: none; }
+
+#interfacematerial {
+  display: none; }
+
+#interfacepisos {
+  display: none; }
+
+#interfacemercado {
+  display: none; }
+
+#interfacedeductible {
+  display: none; }
+
+#interfaceobjetos {
+  display: none; }
+
+#interfacepersonales {
+  display: none; }
+
+#interfacetemporal {
+  display: none; }
+
+#interfacecliente {
+  display: none; }
+
+.move {
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=style.css.map */

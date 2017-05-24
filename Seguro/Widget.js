@@ -1,79 +1,83 @@
-define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array", "esri/domUtils", "esri/tasks/Geoprocessor", "esri/dijit/Legend", "dijit/form/TextBox", "dijit/form/NumberTextBox", "dijit/layout/BorderContainer", "dijit/layout/ContentPane", 'bootstrap/Dropdown', 'bootstrap/Tab', 'bootstrap/Modal'], function (declare, BaseWidget, dom, array, domUtils, Geoprocessor, Legend) {
-  //To create a widget, you need to derive from BaseWidget.
+define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
+"esri/tasks/Geoprocessor", "esri/dijit/Legend", "dijit/form/TextBox", "dijit/form/NumberTextBox",
+"dijit/layout/BorderContainer", "dijit/layout/ContentPane", 'bootstrap/Dropdown', 'bootstrap/Tab',
+'bootstrap/Modal'], function (declare, BaseWidget, dom, domUtils, Geoprocessor, Legend) {
+
   return declare([BaseWidget], {
-    // Custom widget code goes here
+
 
     baseClass: 'jimu-widget-seguro',
 
-    change: function change() {
-      if (document.getElementById("interface1").style.display === "none") {
-        document.getElementById("interface1").style.display = "block";
-        document.getElementById("interface2").style.display = "none";
-      } else {
-        document.getElementById("interface1").style.display = "none";
-        document.getElementById("interface2").style.display = "block";
-      }
+    change: function(){
+        if (document.getElementById("interface1").style.display==="none"){
+          document.getElementById("interface1").style.display="block";
+          document.getElementById("interface2").style.display="none";
+        } else{
+          document.getElementById("interface1").style.display="none";
+          document.getElementById("interface2").style.display="block";
+        }
     },
 
-    bienes: function bienes() {
-      var radioButtons = document.getElementsByName("bienes");
-      if (radioButtons[0].value === "true") {
-        if (radioButtons[0].checked) {
-          document.getElementById("coberturebienes").removeAttribute('disabled');
+    bienes: function(){
+      var radioButtons= document.getElementsByName("bienes");
+      if(radioButtons[0].value==="true"){
+        if(radioButtons[0].checked){
+        document.getElementById("coberturebienes").removeAttribute('disabled');
         }
       }
-      if (radioButtons[1].value === "false") {
-        if (radioButtons[1].checked) {
+      if(radioButtons[1].value==="false"){
+        if(radioButtons[1].checked){
           document.getElementById("coberturebienes").setAttribute('disabled', '');
           $("#coberturebienes").val('0');
-        } else {
+        }else{
           document.getElementById("coberturebienes").removeAttribute('disabled');
+          }
         }
-      }
     },
 
-    temporal: function temporal() {
-      var radioButtons = document.getElementsByName("inhabitabilidad");
-      if (radioButtons[0].value === "true") {
-        if (radioButtons[0].checked) {
-          document.getElementById("coberturetemporal").removeAttribute('disabled');
+    temporal: function(){
+      var radioButtons= document.getElementsByName("inhabitabilidad");
+      if(radioButtons[0].value==="true"){
+        if(radioButtons[0].checked){
+        document.getElementById("coberturetemporal").removeAttribute('disabled');
         }
       }
-      if (radioButtons[1].value === "false") {
-        if (radioButtons[1].checked) {
+      if(radioButtons[1].value==="false"){
+        if(radioButtons[1].checked){
           document.getElementById("coberturetemporal").setAttribute('disabled', '');
           $("#coberturetemporal").val('0');
-        } else {
+        }else{
           document.getElementById("coberturetemporal").removeAttribute('disabled');
+          }
+        }
+    },
+
+    cliente: function(){
+      var radioButtons= $('input[name=cliente]');
+      if(radioButtons[0].value==="true"){
+        if(radioButtons[0].checked){
+              //Habilitamos
+              document.getElementById("insurance1").removeAttribute('disabled');
+              document.getElementById("insurance2").removeAttribute('disabled');
+              document.getElementById("insurance3").removeAttribute('disabled');
+        }
+      }
+      if(radioButtons[1].value==="false"){
+        if(radioButtons[1].checked){
+              //Desabilitamos
+              document.getElementById("insurance1").setAttribute('disabled', '');
+              document.getElementById("insurance2").setAttribute('disabled', '');
+              document.getElementById("insurance3").setAttribute('disabled', '');
+              //Deschequeamos
+              $('#insurance1').prop('checked', false);
+              $('#insurance2').prop('checked', false);
+              $('#insurance3').prop('checked', false);
+
         }
       }
     },
 
-    cliente: function cliente() {
-      var radioButtons = $('input[name=cliente]');
-      if (radioButtons[0].value === "true") {
-        if (radioButtons[0].checked) {
-          //Habilitamos
-          document.getElementById("insurance1").removeAttribute('disabled');
-          document.getElementById("insurance2").removeAttribute('disabled');
-          document.getElementById("insurance3").removeAttribute('disabled');
-        }
-      }
-      if (radioButtons[1].value === "false") {
-        if (radioButtons[1].checked) {
-          //Desabilitamos
-          document.getElementById("insurance1").setAttribute('disabled', '');
-          document.getElementById("insurance2").setAttribute('disabled', '');
-          document.getElementById("insurance3").setAttribute('disabled', '');
-          //Deschequeamos
-          $('#insurance1').prop('checked', false);
-          $('#insurance2').prop('checked', false);
-          $('#insurance3').prop('checked', false);
-        }
-      }
-    },
-
-    startup: function startup() {
+    startup: function () {
       var gpServiceUrl = "https://localhost:6443/arcgis/rest/services/Aseguradora/GPSeguros/GPServer/ScriptEdificios";
       this.gp = new Geoprocessor(gpServiceUrl);
       window.$app = {
@@ -84,7 +88,8 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
       //dom.byId("anio").value = this.config.inPanelVar.params.anio;
     },
 
-    calcularseguro: function calcularseguro() {
+
+    calcularseguro: function() {
       var anio = dom.byId("anio").value;
       var edificio = dom.byId("edificio").value;
       var construccion = dom.byId("construccion").value;
@@ -201,7 +206,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
       }
     },
 
-    gpJobComplete: function gpJobComplete(jobinfo) {
+    gpJobComplete: function (jobinfo) {
       console.log(jobinfo);
       //get the result map service layer and add to map
       window.$app.gp.getResultImageLayer(jobinfo.jobId, null, null, function (layer) {
@@ -247,7 +252,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
       });
     },
 
-    gpJobStatus: function gpJobStatus(jobinfo) {
+    gpJobStatus: function (jobinfo) {
       domUtils.show(dom.byId('status'));
       var jobstatus = '';
       var status = document.getElementById('status');
@@ -276,13 +281,13 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "dojo/_base/array",
       dom.byId('status').innerHTML = jobstatus;
     },
 
-    gpJobFailed: function gpJobFailed(error) {
+    gpJobFailed: function(error) {
       error = "Problemas técnicos, vuelve a intentarlo...";
       document.getElementById('status').className = "error";
       dom.byId('status').innerHTML = error;
     },
 
-    cleanup: function cleanup() {
+    cleanup: function() {
       //hide the legend and remove the existing hotspot layer
       domUtils.hide(dom.byId('legendDiv'));
       domUtils.hide(dom.byId('status'));
