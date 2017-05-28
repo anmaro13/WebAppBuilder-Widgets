@@ -97,12 +97,12 @@
                           <div class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
                           <select name="material" id = "material" class="form-control selectpicker" title="${config.valuematerial}" >
-                            <option value="0" >Selecciona un tipo de material</option>
-                            <option id="Material1" value= "Ladrillo con efecto diafragma">Ladrillo con efecto diafragma</option>
-                            <option id="Material2" value= "Ladrillo sin efecto diafragma">Ladrillo sin efecto diafragma</option>
-                            <option id="Material3" value= "Mamposteria">Mampostería</option>
-                            <option id="Material4" value= "Porticos de Hormigon Armado CON diseño sismorresistente">Porticos de Hormigon Armado con diseño sismorresistente</option>
-                            <option id="Material5" value= "Porticos de Hormigon Armado SIN diseño sismorresistente">Porticos de Hormigon Armado sin diseño sismorresistente</option>
+                            <option value= "0" >Selecciona un tipo de material</option>
+                            <option id= "Material1" value= "Ladrillo con efecto diafragma">Ladrillo con efecto diafragma</option>
+                            <option id= "Material2" value= "Ladrillo sin efecto diafragma">Ladrillo sin efecto diafragma</option>
+                            <option id= "Material3" value= "Mamposteria">Mampostería</option>
+                            <option id= "Material4" value= "Porticos de Hormigon Armado CON diseño sismorresistente">Porticos de Hormigon Armado con diseño sismorresistente</option>
+                            <option id= "Material5" value= "Porticos de Hormigon Armado SIN diseño sismorresistente">Porticos de Hormigon Armado sin diseño sismorresistente</option>
                           </select>
                         </div>
                       </div>
@@ -154,17 +154,17 @@
                   <!-- Deductible-->
 
                   <div class="form-group">
-                      <label class="col-md-6 control-label">Deductible</label>
+                      <label class="col-md-6 control-label" title="${config.infodeductible}">${config.deductible}</label>
                       <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                        <select name="deductible" id = "deductible" class="form-control selectpicker" >
-                          <option value="" >Selecciona un porcentaje</option>
-                          <option value = "5%">5%</option>
-                          <option value = "10%">10%</option>
-                          <option value = "15%">15%</option>
-                          <option value = "20%">20%</option>
-                          <option value = "25%">25%</option>
+                        <select name="deductible" id = "deductible" class="form-control selectpicker" title="${config.valuedeductible}" >
+                          <option value= "0" >Selecciona un porcentaje</option>
+                          <option id="5" value= "5%">5%</option>
+                          <option id="10" value= "10%">10%</option>
+                          <option id="15" value= "15%">15%</option>
+                          <option id="20" value= "20%">20%</option>
+                          <option id="25" value= "25%">25%</option>
                         </select>
                       </div>
                     </div>
@@ -172,37 +172,37 @@
 
                   <!-- Cobertura objetos fragiles -->
 
-                  <div class="form-group">
+                  <div class="form-group" id="${config.visobj}">
                           <div>
-                            <label class="col-md-6 control-label">¿Cobertura de objetos frágiles?</label>
+                            <label class="col-md-6 control-label" title="${config.infoobject}">${config.objecttext}</label>
                           </div>
                           <div class="col-md-6">
                               <div class="radio-inline">
                                   <label>
-                                      <input type="radio" name="objetos" id="objetos" value="true" /> Si
+                                      <input type="radio" name="objetos" id="objetos" ${config.object} value="true" /> Si
                                   </label>
                               </div>
                               <div class="radio-inline">
                                   <label>
-                                      <input type="radio" name="objetos" id ="objetos1" value="false" /> No
+                                      <input type="radio" name="objetos" id="objetos1" ${config.objection} value="false"/> No
                                   </label>
                               </div>
                             </div>
                     </div>
+
                   <!-- Cobertura de bienes personales -->
 
-
-                  <div class="form-group">
-                     <label class="col-md-6 control-label">¿Cobertura de bienes personales?</label>
+                  <div class="form-group" id="${config.vispers}">
+                     <label class="col-md-6 control-label" title="${config.infoperson}">${config.persontext}</label>
                      <div class="col-md-6">
                        <div class="radio-inline">
                            <label>
-                               <input type="radio" name="bienes" id="bienes" value="true" data-dojo-attach-event="onclick:bienes"/> Si
+                               <input type="radio" name="bienes" id="bienes" value="true" ${config.person} data-dojo-attach-event="onclick:bienes"/> Si
                            </label>
                        </div>
                        <div class="radio-inline">
                            <label>
-                               <input type="radio" name="bienes" id="bienes1" value="false" data-dojo-attach-event="onclick:bienes"/> No
+                               <input type="radio" name="bienes" id="bienes1" value="false" ${config.personal} data-dojo-attach-event="onclick:bienes"/> No
                            </label>
                        </div>
                      </div>
@@ -210,12 +210,12 @@
 
                   <!-- Valor de bienes personales-->
 
-                  <div class="form-group">
+                  <div class="form-group" id="optional5">
                     <label class="col-md-6 control-label">Valor de bienes personales</label>
                     <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="personales" class="form-control selectpicker" id="coberturebienes" disabled>
+                    <select name="personales" class="form-control selectpicker" id="coberturebienes" title="${config.valueperson}" disabled>
                      <option value="0" >Selecciona un valor</option>
                      <option value="5000">5.000€</option>
                      <option value="10000">10.000€</option>
@@ -229,17 +229,17 @@
 
                   <!-- Cobertura de inhabitabilidad temporal -->
 
-                  <div class="form-group">
-                   <label class="col-md-6 control-label">¿Cobertura por inhabitabilidad temporal?</label>
+                  <div class="form-group" id="${config.vistemp}">
+                   <label class="col-md-6 control-label" title="${config.infotemporal}">${config.temporaltext}</label>
                    <div class="col-md-6">
                      <div class="radio-inline">
                          <label>
-                             <input type="radio" name="inhabitabilidad" id = "temporal" value="true" data-dojo-attach-event="onclick:temporal"/> Si
+                             <input type="radio" name="inhabitabilidad" id = "temporal" value="true" ${config.tempo} data-dojo-attach-event="onclick:temporal"/> Si
                          </label>
                      </div>
                      <div class="radio-inline">
                          <label>
-                             <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" data-dojo-attach-event="onclick:temporal"/> No
+                             <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" ${config.temporal} data-dojo-attach-event="onclick:temporal"/> No
                          </label>
                      </div>
                    </div>
@@ -247,34 +247,34 @@
 
                   <!-- Valor de inhabitabilidad temporal-->
 
-                  <div class="form-group">
+                  <div class="form-group" id="optional8">
                     <label class="col-md-6 control-label">Valor de inhabitabilidad temporal</label>
                     <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                    <select name="temporal" class="form-control selectpicker" id="coberturetemporal" disabled>
+                    <select name="temporal" class="form-control selectpicker" id="coberturetemporal" title="${config.valuetemporal}" disabled>
                      <option value="0" >Selecciona un valor</option>
-                     <option value="1000">1.000€</option>
-                     <option value="5000">5.000€</option>
-                     <option value="10000">10.000€</option>
-                     <option value="20000">20.000€</option>
+                     <option id="1000" value="1000">1.000€</option>
+                     <option id="5000" value="5000">5.000€</option>
+                     <option id="10000" value="10000">10.000€</option>
+                     <option id="20000" value="20000">20.000€</option>
                     </select>
                     </div>
                   </div>
                   </div>
 
                   <!-- Cliente-->
-                  <div class="form-group">
-                    <label class="col-md-6 control-label">¿Es cliente nuestro?</label>
+                  <div class="form-group" id="${config.client}">
+                    <label class="col-md-6 control-label" title="${config.infocliente}">${config.clientetext}</label>
                     <div class="col-md-6">
                         <div class="radio-inline">
                           <label>
-                            <input type="radio" name="cliente" id = "cliente" value="true" data-dojo-attach-event="onclick:cliente"/> Si
+                            <input type="radio" name="cliente" id = "cliente" value="true" ${config.clien} data-dojo-attach-event="onclick:cliente"/> Si
                           </label>
                         </div>
                         <div class="radio-inline">
                           <label>
-                            <input type="radio" name="cliente" id="cliente1" value="false" data-dojo-attach-event="onclick:cliente"/> No
+                            <input type="radio" name="cliente" id="cliente1" value="false" ${config.cliente} data-dojo-attach-event="onclick:cliente"/> No
                           </label>
                         </div>
                     </div>

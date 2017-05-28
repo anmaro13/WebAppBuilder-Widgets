@@ -125,6 +125,55 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
       }else if(dom.byId("material").title === "Porticos de Hormigon Armado SIN diseño sismorresistente"){
         document.getElementById("Material5").setAttribute('selected', '');
       }
+
+      if (dom.byId("deductible").title === "5%"){
+        document.getElementById("5").setAttribute('selected', '');
+      } else if(dom.byId("deductible").title === "10%"){
+        document.getElementById("10").setAttribute('selected', '');
+      }else if(dom.byId("deductible").title === "15%"){
+        document.getElementById("15").setAttribute('selected', '');
+      }else if(dom.byId("deductible").title === "20%"){
+        document.getElementById("20").setAttribute('selected', '');
+      }else if(dom.byId("deductible").title === "25%"){
+        document.getElementById("25").setAttribute('selected', '');
+      }
+
+      if (dom.byId("objetos").checked){
+        document.getElementById("objetos1").removeAttribute('checked');
+      } else if(dom.byId("objetos1").checked){
+        document.getElementById("objetos").removeAttribute('checked');
+      }
+
+      if (dom.byId("optional2")){
+        document.getElementById("optional2").remove();
+      }
+
+      if (dom.byId("optional4")){
+        document.getElementById("optional4").remove();
+        document.getElementById("optional5").remove();
+      }
+
+      if (dom.byId("optional7")){
+        document.getElementById("optional7").remove();
+        document.getElementById("optional8").remove();
+      }
+
+      if (dom.byId("coberturebienes").title === "5.000€"){
+        document.getElementById("5000").setAttribute('selected', '');
+        document.getElementById("coberturebienes").removeAttribute('disabled', '');
+      } else if(dom.byId("coberturebienes").title === "10.000€"){
+        document.getElementById("10000").setAttribute('selected', '');
+        document.getElementById("coberturebienes").removeAttribute('disabled', '');
+      }else if(dom.byId("coberturebienes").title === "15.000€"){
+        document.getElementById("15000").setAttribute('selected', '');
+        document.getElementById("coberturebienes").removeAttribute('disabled', '');
+      }else if(dom.byId("coberturebienes").title === "20.000€"){
+        document.getElementById("20000").setAttribute('selected', '');
+        document.getElementById("coberturebienes").removeAttribute('disabled', '');
+      }else if(dom.byId("coberturebienes").title === "25.000€"){
+        document.getElementById("25000").setAttribute('selected', '');
+        document.getElementById("coberturebienes").removeAttribute('disabled', '');
+      }
     },
 
 

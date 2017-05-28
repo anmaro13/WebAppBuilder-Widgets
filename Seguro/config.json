@@ -32,7 +32,37 @@
   "market": "Valor de mercado",
   "infomarket": "Valor de mercado de la vivienda",
   "helpmarket": "Introduce un valor inferior a 1000000 €.",
-  "valuemarket": "150000"
+  "valuemarket": "150000",
+
+  "deductible": "Deductible",
+  "infodeductible": "Deductible del seguro",
+  "valuedeductible": "5%",
+
+  "objecttext": "¿Cobertura de objetos frágiles?",
+  "infoobject": "Valor de la cobertura de objetos",
+  "visobj":"optional1",
+  "object":"cheked",
+  "objection":" ",
+
+  "persontext": "¿Cobertura de bienes personales?",
+  "infoperson": "Valor de la cobertura de bienes personales",
+  "vispers":"optional3",
+  "person":"cheked",
+  "personal":" ",
+  "valueperson": "0",
+
+  "temporaltext": "¿Cobertura por inhabitabilidad temporal?",
+  "infotemporal": "Valor de la cobertura de inhabitabilidad temporal",
+  "vistemp":"optional6",
+  "tempo":"cheked",
+  "temporal":" ",
+  "valuetemporal": "0",
+
+  "clientetext": "¿Es cliente nuestro?",
+  "infocliente": "Si deseas evaluar la situación del cliente",
+  "client":"optional9",
+  "clien":"cheked",
+  "cliente":" "
 
 
 }

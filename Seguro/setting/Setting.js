@@ -106,10 +106,138 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
       this.infopricemarket.value = config.infomarket;
       this.helppricemarket.value = config.helpmarket;
       this.valuepricemarket.value = config.valuemarket;
+
+      this.taxdeductible.value = config.deductible;
+      this.infotaxdeductible.value = config.infodeductible;
+      this.valuetaxdeductible.value = config.valuedeductible;
+
+      this.objectcoverage.value = config.objecttext;
+      this.infoobjectcoverage.value = config.infoobject;
+
+      this.personcoverage.value = config.persontext;
+      this.infopersoncoverage.value = config.infoperson;
+      this.valuepersoncoverage.value = config.valueperson;
+
+      this.temporalcoverage.value = config.temporaltext;
+      this.infotemporalcoverage.value = config.infotemporal;
+      this.valuetemporalcoverage.value = config.valuetemporal;
+
+      this.clientecoverage.value = config.clientetext;
+      this.infoclientecoverage.value = config.infocliente;
+
     },
 
     getConfig: function getConfig() {
     //WAB will get config object through this method
+
+      var visibleobjectButton= document.getElementById("visiobject");
+      if(visibleobjectButton.checked){
+          this.visibleobj.value = "optional1";
+          var visibleob = this.visibleobj.value;
+      }else{
+        this.visibleobj.value = "optional2";
+        var visibleob = this.visibleobj.value;
+      }
+
+      var ObjectButtons= document.getElementsByName("objetos");
+      if(ObjectButtons[0].value==="true"){
+        if(ObjectButtons[0].checked){
+          this.covobject.value = "checked";
+          this.covobjection.value = " ";
+          var obje = this.covobjection.value;
+          var obj = this.covobject.value;
+        }
+      }
+      if(ObjectButtons[1].value==="false"){
+        if(ObjectButtons[1].checked){
+          this.covobject.value = " ";
+          this.covobjection.value = "checked";
+          var obj = this.covobject.value;
+          var obje = this.covobjection.value;
+        }
+      }
+
+      var personalobjectButton= document.getElementById("visiperson");
+      if(personalobjectButton.checked){
+          this.visiblepers.value = "optional3";
+          var visiblepe = this.visiblepers.value;
+      }else{
+        this.visiblepers.value = "optional4";
+        var visiblepe = this.visiblepers.value;
+      }
+
+      var PersonalButtons= document.getElementsByName("bienes");
+      if(PersonalButtons[0].value==="true"){
+        if(PersonalButtons[0].checked){
+          this.covperson.value = "checked";
+          this.covpersonal.value = " ";
+          var per = this.covperson.value;
+          var pers = this.covpersonal.value;
+        }
+      }
+      if(PersonalButtons[1].value==="false"){
+        if(PersonalButtons[1].checked){
+          this.covperson.value = " ";
+          this.covpersonal.value = "checked";
+          var per = this.covperson.value;
+          var pers = this.covpersonal.value;
+        }
+      }
+
+      var temporaltextobjectButton= document.getElementById("visitempo");
+      if(temporaltextobjectButton.checked){
+            this.visibletemp.value = "optional6";
+            var visiblete = this.visibletemp.value;
+        }else{
+          this.visibletemp.value = "optional7";
+          var visiblete = this.visibletemp.value;
+        }
+
+      var TemporalButtons= document.getElementsByName("inhabitabilidad");
+      if(TemporalButtons[0].value==="true"){
+          if(TemporalButtons[0].checked){
+            this.covtempo.value = "checked";
+            this.covtemporal.value = " ";
+            var tem = this.covtempo.value;
+            var temp = this.covtemporal.value;
+          }
+        }
+      if(TemporalButtons[1].value==="false"){
+          if(TemporalButtons[1].checked){
+            this.covtempo.value = " ";
+            this.covtemporal.value = "checked";
+            var tem = this.covtempo.value;
+            var temp = this.covtemporal.value;
+          }
+      }
+
+      var clientetextobjectButton= document.getElementById("visiclient");
+      if(clientetextobjectButton.checked){
+            this.visiblecliente.value = "optional9";
+            var visiblecli = this.visiblecliente.value;
+        }else{
+          this.visiblecliente.value = "optional10";
+          var visiblecli = this.visiblecliente.value;
+        }
+
+      var ClienteButtons= document.getElementsByName("cliente");
+        if(ClienteButtons[0].value==="true"){
+            if(ClienteButtons[0].checked){
+              this.covclien.value = "checked";
+              this.covcliente.value = " ";
+              var cli = this.covclien.value;
+              var clie = this.covcliente.value;
+            }
+          }
+        if(ClienteButtons[1].value==="false"){
+            if(ClienteButtons[1].checked){
+              this.covclien.value = " ";
+              this.covcliente.value = "checked";
+              var cli = this.covclien.value;
+              var clie = this.covcliente.value;
+            }
+        }
+
       return {
         iyear: this.insyear.value,
         infoiyear: this.infoinsyear.value,
@@ -146,7 +274,37 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
         helpmarket: this.helppricemarket.value,
         valuemarket: this.valuepricemarket.value,
 
+        deductible: this.taxdeductible.value,
+        infodeductible: this.infotaxdeductible.value,
+        valuedeductible: this.valuetaxdeductible.value,
+
+        objecttext: this.objectcoverage.value,
+        infoobject: this.infoobjectcoverage.value,
+        visobj: visibleob,
+        object: obj,
+        objection: obje,
+
+        persontext: this.personcoverage.value,
+        infoperson: this.infopersoncoverage.value,
+        vispers: visiblepe,
+        person: per,
+        personal: pers,
+        valueperson: this.valuepersoncoverage.value,
+
+        temporaltext: this.temporalcoverage.value,
+        infotemporal: this.infotemporalcoverage.value,
+        vistemp: visiblete,
+        tempo: tem,
+        temporal: temp,
+        valuetemporal: this.valuetemporalcoverage.value,
+
+        clientetext: this.clientecoverage.value,
+        infocliente: this.infoclientecoverage.value,
+        client: visiblecli,
+        clien: cli,
+        cliente: clie
       };
+
     },
 
     onClick_Descripcion: function() {

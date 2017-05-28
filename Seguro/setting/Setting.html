@@ -293,20 +293,20 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Deductible" class="form-control" type="text">
+                          <input  value="Deductible" class="form-control" type="text" data-dojo-attach-point="taxdeductible">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Deductible" class="form-control" type="text">
+                          <input  value= "Deductible" class="form-control" type="text" data-dojo-attach-point="infotaxdeductible">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <select class="form-control selectpicker" >
-                          <option value="" >Selecciona un porcentaje</option>
+                        <select class="form-control selectpicker" data-dojo-attach-point="valuetaxdeductible">
+                          <option value="" >Selecciona un porcentaje </option>
                           <option value = "5%">5%</option>
                           <option value = "10%">10%</option>
                           <option value = "15%">15%</option>
@@ -322,21 +322,21 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Cobertura de Objetos" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="objectcoverage">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Cobertura de Objetos" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoobjectcoverage">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Visible: </label>
                   <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                         <div class="onoffswitch">
-                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked hidden>
-                          <label class="onoffswitch-label" for="myonoffswitch"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="visiobject" data-dojo-attach-point="visibleobj" checked hidden>
+                          <label class="onoffswitch-label" for="visiobject"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
                         </div>
                     </div>
                   </div>
@@ -345,12 +345,12 @@
                       <div class="input-group">
                         <div class="radio-inline">
                             <label>
-                                <input type="radio" name="objetos" id="objetos" value="true" /> Si
+                                <input type="radio" name="objetos" id="objetos" value="true" checked data-dojo-attach-point="covobject" /> Si
                             </label>
                         </div>
                         <div class="radio-inline">
                             <label>
-                                <input type="radio" name="objetos" id ="objetos1" value="false" /> No
+                                <input type="radio" name="objetos" id="objetos1" value="false" data-dojo-attach-point="covobjection"/> No
                             </label>
                         </div>
                       </div>
@@ -361,21 +361,21 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Cobertura de bienes personales" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="personcoverage">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Cobertura de bienes personales" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infopersoncoverage">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Visible: </label>
                   <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                         <div class="onoffswitch">
-                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" checked hidden>
-                          <label class="onoffswitch-label" for="myonoffswitch"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="visiperson" data-dojo-attach-point="visiblepers" checked hidden>
+                          <label class="onoffswitch-label" for="visiperson"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
                         </div>
                     </div>
                   </div>
@@ -384,12 +384,12 @@
                       <div class="input-group">
                         <div class="radio-inline">
                             <label>
-                                <input type="radio" name="bienes" id="bienes" value="true" data-dojo-attach-event="onclick: onClick_bienes"/> Si
+                                <input type="radio" name="bienes" id="bienes" value="true" data-dojo-attach-event="onclick: onClick_bienes" data-dojo-attach-point="covperson"/> Si
                             </label>
                         </div>
                         <div class="radio-inline">
                             <label>
-                                <input type="radio" name="bienes" id ="bienes1" value="false" data-dojo-attach-event="onclick: onClick_bienes"/> No
+                                <input type="radio" name="bienes" id ="bienes1" value="false" data-dojo-attach-event="onclick: onClick_bienes" checked data-dojo-attach-point="covpersonal"/> No
                             </label>
                         </div>
                       </div>
@@ -397,13 +397,13 @@
                   <label class="col-md-6 control-label">Valor de la cobertura: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <select name="personales" class="form-control selectpicker" id="coberturebienes" disabled>
+                        <select name="personales" class="form-control selectpicker" id="coberturebienes" disabled data-dojo-attach-point="valuepersoncoverage">
                          <option value="0" >Selecciona un valor</option>
-                         <option value="5000">5.000€</option>
-                         <option value="10000">10.000€</option>
-                         <option value="15000">15.000€</option>
-                         <option value="20000">20.000€</option>
-                         <option value="25000">25.000€</option>
+                         <option id="5000" value="5000">5.000€</option>
+                         <option id="10000" value="10000">10.000€</option>
+                         <option id="15000" value="15000">15.000€</option>
+                         <option id="20000" value="20000">20.000€</option>
+                         <option id="25000" value="25000">25.000€</option>
                         </select>
                       </div>
                   </div>
@@ -413,21 +413,21 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Cobertura por inhabitabilidad temporal" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="temporalcoverage">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Cobertura por inhabitabilidad temporal" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infotemporalcoverage">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Visible: </label>
                   <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                         <div class="onoffswitch">
-                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" checked hidden>
-                          <label class="onoffswitch-label" for="myonoffswitch"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="visitempo" data-dojo-attach-point="visibletemp" checked hidden>
+                          <label class="onoffswitch-label" for="visitempo"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
                         </div>
                     </div>
                   </div>
@@ -436,12 +436,12 @@
                       <div class="input-group">
                         <div class="radio-inline">
                             <label>
-                                <input type="radio" name="inhabitabilidad" id = "temporal" value="true" data-dojo-attach-event="onclick:temporal"/> Si
+                                <input type="radio" name="inhabitabilidad" id = "temporal" value="true" data-dojo-attach-event="onclick:temporal" data-dojo-attach-point="covtempo"/> Si
                             </label>
                         </div>
                         <div class="radio-inline">
                             <label>
-                                <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" data-dojo-attach-event="onclick:temporal"/> No
+                                <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" data-dojo-attach-event="onclick:temporal" checked data-dojo-attach-point="covtemporal"/> No
                             </label>
                         </div>
                       </div>
@@ -449,7 +449,7 @@
                   <label class="col-md-6 control-label">Valor de la cobertura: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <select name="temporal" class="form-control selectpicker" id="coberturetemporal" disabled>
+                        <select name="temporal" class="form-control selectpicker" id="coberturetemporal" disabled data-dojo-attach-point="valuetemporalcoverage">
                          <option value="0" >Selecciona un valor</option>
                          <option value="1000">1.000€</option>
                          <option value="5000">5.000€</option>
@@ -464,21 +464,21 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Cliente" class="form-control" type="text">
+                          <input  class="form-control" type="text" data-dojo-attach-point="clientecoverage">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Cliente" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoclientecoverage">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Visible: </label>
                   <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                         <div class="onoffswitch">
-                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" checked hidden>
-                          <label class="onoffswitch-label" for="myonoffswitch"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="visiclient" data-dojo-attach-point="visiblecliente" checked hidden>
+                          <label class="onoffswitch-label" for="visiclient"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
                         </div>
                     </div>
                   </div>
@@ -487,12 +487,12 @@
                       <div class="input-group">
                         <div class="radio-inline">
                           <label>
-                            <input type="radio" name="cliente" id="cliente" value="true" data-dojo-attach-event="onclick:cliente"/> Si
+                            <input type="radio" name="cliente" id="cliente" value="true" data-dojo-attach-event="onclick:cliente" data-dojo-attach-point="covclien"/> Si
                           </label>
                         </div>
                         <div class="radio-inline">
                           <label>
-                            <input type="radio" name="cliente" id="cliente1" value="false" data-dojo-attach-event="onclick:cliente"/> No
+                            <input type="radio" name="cliente" id="cliente1" value="false" data-dojo-attach-event="onclick:cliente" checked data-dojo-attach-point="covcliente"/> No
                           </label>
                         </div>
                       </div>
