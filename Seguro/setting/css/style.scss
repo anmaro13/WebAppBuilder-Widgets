@@ -114,13 +114,20 @@ legend {
     border-bottom: 1px solid #e5e5e5;
   }
 
-  .image{
+.image{
     width: 129px;
     float: right;
     top: 12px;
     margin-right: 20px;
     margin-top: 20px;
-  }
+}
+
+.help-block {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      color: #737373;
+}
 
 fieldset {
     display: block;

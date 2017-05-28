@@ -17,7 +17,7 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
       if(radioButtons[1].value==="false"){
         if(radioButtons[1].checked){
           document.getElementById("coberturebienes").setAttribute('disabled', '');
-          $("#coberturebienes").val('0');
+          document.getElementById("coberturebienes").value ='0';
         }else{
           document.getElementById("coberturebienes").removeAttribute('disabled');
           }
@@ -34,7 +34,7 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
       if(radioButtons[1].value==="false"){
         if(radioButtons[1].checked){
           document.getElementById("coberturetemporal").setAttribute('disabled', '');
-          $("#coberturetemporal").val('0');
+          document.getElementById("coberturetemporal").value ='0';
         }else{
           document.getElementById("coberturetemporal").removeAttribute('disabled');
           }
@@ -70,20 +70,82 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
       this.setConfig(this.config);
     },
 
-    startup: function startup() {
-      domUtils.hide(dom.byId('parametros'));
-
-    },
-
     // On open widget config
     setConfig: function(config) {
-      this.textNode.value = config.anio;
+      this.insyear.value = config.iyear;
+      this.infoinsyear.value = config.infoiyear;
+      this.valueinsyear.value = config.valueiyear;
+
+      this.building.value = config.build;
+      this.infobuilding.value = config.infobuild;
+      this.valuebuilding.value = config.valuebuild;
+
+      this.consyear.value = config.cyear;
+      this.infoconsyear.value = config.infocyear;
+      this.helpconsyear.value = config.helpcyear;
+      this.valueconsyear.value = config.valuecyear;
+
+      this.housespace.value = config.space;
+      this.infohousespace.value = config.infospace;
+      this.helphousespace.value = config.helpspace;
+      this.valuehousespace.value = config.valuespace;
+
+      this.quakedanger.value = config.danger;
+      this.infoquakedanger.value = config.infodanger;
+      this.valuequakedanger.value = config.valuedanger;
+
+      this.consmaterial.value = config.material;
+      this.infoconsmaterial.value = config.infomaterial;
+      this.valueconsmaterial.value = config.valuematerial;
+
+      this.numberfloors.value = config.floors;
+      this.infonumberfloors.value = config.infofloors;
+      this.valuenumberfloors.value = config.valuefloors;
+
+      this.pricemarket.value = config.market;
+      this.infopricemarket.value = config.infomarket;
+      this.helppricemarket.value = config.helpmarket;
+      this.valuepricemarket.value = config.valuemarket;
     },
 
     getConfig: function getConfig() {
     //WAB will get config object through this method
       return {
-        anio: this.textNode.value
+        iyear: this.insyear.value,
+        infoiyear: this.infoinsyear.value,
+        valueiyear: this.valueinsyear.value,
+
+        build: this.building.value,
+        infobuild: this.infobuilding.value,
+        valuebuild: this.valuebuilding.value,
+
+        cyear: this.consyear.value,
+        infocyear: this.infoconsyear.value,
+        helpcyear: this.helpconsyear.value,
+        valuecyear: this.valueconsyear.value,
+
+        space: this.housespace.value,
+        infospace: this.infohousespace.value,
+        helpspace: this.helphousespace.value,
+        valuespace: this.valuehousespace.value,
+
+        danger: this.quakedanger.value,
+        infodanger: this.infoquakedanger.value,
+        valuedanger: this.valuequakedanger.value,
+
+        material: this.consmaterial.value,
+        infomaterial: this.infoconsmaterial.value,
+        valuematerial: this.valueconsmaterial.value,
+
+        floors: this.numberfloors.value,
+        infofloors: this.infonumberfloors.value,
+        valuefloors: this.valuenumberfloors.value,
+
+        market: this.pricemarket.value,
+        infomarket: this.infopricemarket.value,
+        helpmarket: this.helppricemarket.value,
+        valuemarket: this.valuepricemarket.value,
+
       };
     },
 

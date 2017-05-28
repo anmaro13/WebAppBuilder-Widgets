@@ -85,7 +85,46 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
         legend: this.legend,
         layer2: this.layer2
       };
-      //dom.byId("anio").value = this.config.inPanelVar.params.anio;
+
+      if (dom.byId("anio").title === "2015"){
+        document.getElementById("2015").setAttribute('selected', '');
+      } else if(dom.byId("anio").title === "2016"){
+        document.getElementById("2016").setAttribute('selected', '');
+      } else if(dom.byId("anio").title === "2017"){
+        document.getElementById("2017").setAttribute('selected', '');
+      }
+
+      if (dom.byId("edificio").title === "Piso o Apartamento"){
+        document.getElementById("build1").setAttribute('selected', '');
+      } else if(dom.byId("edificio").title === "Vivienda Unifamiliar"){
+        document.getElementById("build2").setAttribute('selected', '');
+      }
+
+      if (dom.byId("peligrosidad").title === "Baja"){
+        document.getElementById("Baja").setAttribute('selected', '');
+      } else if(dom.byId("peligrosidad").title === "Baja-Media"){
+        document.getElementById("Baja-Media").setAttribute('selected', '');
+      }else if(dom.byId("peligrosidad").title === "Media"){
+        document.getElementById("Media").setAttribute('selected', '');
+      }else if(dom.byId("peligrosidad").title === "Media-Alta"){
+        document.getElementById("Media-Alta").setAttribute('selected', '');
+      }else if(dom.byId("peligrosidad").title === "Alta"){
+        document.getElementById("Alta").setAttribute('selected', '');
+      }else if(dom.byId("peligrosidad").title === "Muy Alta"){
+        document.getElementById("Muy Alta").setAttribute('selected', '');
+      }
+
+      if (dom.byId("material").title === "Ladrillo con efecto diafragma"){
+        document.getElementById("Material1").setAttribute('selected', '');
+      } else if(dom.byId("material").title === "Ladrillo sin efecto diafragma"){
+        document.getElementById("Material2").setAttribute('selected', '');
+      }else if(dom.byId("material").title === "Mamposteria"){
+        document.getElementById("Material3").setAttribute('selected', '');
+      }else if(dom.byId("material").title === "Porticos de Hormigon Armado CON diseño sismorresistente"){
+        document.getElementById("Material4").setAttribute('selected', '');
+      }else if(dom.byId("material").title === "Porticos de Hormigon Armado SIN diseño sismorresistente"){
+        document.getElementById("Material5").setAttribute('selected', '');
+      }
     },
 
 

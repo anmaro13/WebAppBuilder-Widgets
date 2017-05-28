@@ -13,15 +13,15 @@
                   <!-- Año de Poliza-->
 
                   <div class="form-group">
-                    <label class="col-md-6 control-label">${config.anio}</label>
+                    <label class="col-md-6 control-label" title="${config.infoiyear}">${config.iyear}</label>
                       <div class="col-md-6 selectContainer">
                       <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                      <select name="poliza" id ="anio" class="form-control selectpicker" >
-                        <option value="" >Selecciona un año</option>
-                        <option value= "2015">2015</option>
-                        <option value = "2016">2016</option>
-                        <option value= "2017">2017</option>
+                      <select name="poliza" id ="anio" class="form-control selectpicker" title="${config.valueiyear}" >
+                        <option value="0" >Selecciona un año</option>
+                        <option id="2015" value="2015">2015</option>
+                        <option id="2016" value="2016">2016</option>
+                        <option id="2017" value="2017">2017</option>
                       </select>
                       </div>
                       </div>
@@ -30,14 +30,14 @@
                   <!-- Tipo de edificio-->
 
                   <div class="form-group">
-                    <label class="col-md-6 control-label">Tipo de edificio</label>
+                    <label class="col-md-6 control-label" title="${config.infobuild}">${config.build}</label>
                       <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                        <select name="edificio" id="edificio" class="form-control selectpicker" >
-                          <option value="" >Selecciona un tipo de edificio</option>
-                          <option value="Piso/Apartamento">Piso o Apartamento</option>
-                          <option value="Vivienda Unifamiliar">Vivienda Unifamiliar</option>
+                        <select name="edificio" id="edificio" class="form-control selectpicker" title="${config.valuebuild}">
+                          <option value="0" >Selecciona un tipo de edificio</option>
+                          <option id="build1" value="Piso o Apartamento">Piso o Apartamento</option>
+                          <option id="build2" value="Vivienda Unifamiliar">Vivienda Unifamiliar</option>
                         </select>
                       </div>
                     </div>
@@ -46,45 +46,44 @@
                   <!-- Año construccion-->
 
                   <div class="form-group">
-                      <label class="col-md-6 control-label">Año de construcción</label>
+                      <label class="col-md-6 control-label" title="${config.infocyear}">${config.cyear}</label>
                         <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                            <input name="anio" id = "construccion" placeholder="Introduce un año" max="2014" min="1800" class="form-control" type="text" pattern="/[1][8|9][0-9][0-9]|[2][0][1][4]/">
-                            <div id="contruccionerror"></div>
+                            <input name="anio" id ="construccion" placeholder="Introduce un año" max="2014" min="1800" class="form-control" type="text" pattern="/[1][8|9][0-9][0-9]|[2][0][1][4]/" value="${config.valuecyear}">
                         </div>
-                        <p class="help-block">Introduce un valor entre el año 1800 y el 2014.</p>
+                        <p class="help-block">${config.helpcyear}</p>
                       </div>
                     </div>
 
                   <!-- Superficie-->
 
                   <div class="form-group">
-                      <label class="col-md-6 control-label">Superficie de la vivienda</label>
+                      <label class="col-md-6 control-label" title="${config.infospace}">${config.space}</label>
                         <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                      <input name="superficie" id = "superficie" placeholder="Introduce los m2" max="500" min="20" class="form-control" type="text" pattern="/[2-9][0-9]|[1-4][0-9][0-9]|[5][0][0]">
+                            <input name="superficie" id = "superficie" placeholder="Introduce los m2" max="500" min="20" class="form-control" type="text" pattern="/[2-9][0-9]|[1-4][0-9][0-9]|[5][0][0]" value="${config.valuespace}">
                         </div>
-                        <p class="help-block">Introduce un valor entre 20 y 500 m2.</p>
+                        <p class="help-block">${config.helpspace}</p>
                         </div>
                     </div>
 
                   <!-- Peligrosidad-->
 
                   <div class="form-group">
-                      <label class="col-md-6 control-label">Peligrosidad</label>
+                      <label class="col-md-6 control-label" title="${config.infodanger}">${config.danger}</label>
                       <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                        <select name="peligrosidad" id="peligrosidad" class="form-control selectpicker" >
-                          <option value="" >Selecciona una peligrosidad</option>
-                          <option value= "Baja">Baja</option>
-                          <option value= "Baja-Media">Baja-Media</option>
-                          <option value= "Media">Media</option>
-                          <option value ="Media-Alta">Media-Alta</option>
-                          <option value = "Alta">Alta</option>
-                          <option value = "Muy Alta">Muy Alta</option>
+                        <select name="peligrosidad" id="peligrosidad" class="form-control selectpicker" title="${config.valuedanger}" >
+                          <option value="0" >Selecciona una peligrosidad</option>
+                          <option id="Baja" value="Baja">Baja</option>
+                          <option id="Baja-Media" value="Baja-Media">Baja-Media</option>
+                          <option id="Media" value="Media">Media</option>
+                          <option id="Media-Alta" value="Media-Alta">Media-Alta</option>
+                          <option id="Alta" value="Alta">Alta</option>
+                          <option id="Muy Alta" value="Muy Alta">Muy Alta</option>
                         </select>
                       </div>
                     </div>
@@ -93,17 +92,17 @@
                   <!-- Tipo de material-->
 
                   <div class="form-group">
-                        <label class="col-md-6 control-label">Tipo de material</label>
+                        <label class="col-md-6 control-label" title="${config.infomaterial}">${config.material}</label>
                         <div class="col-md-6 inputGroupContainer">
                           <div class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                          <select name="material" id = "material" class="form-control selectpicker" >
-                            <option value="" >Selecciona un tipo de material</option>
-                            <option value= "Ladrillo con efecto diafragma">Ladrillo con efecto diafragma</option>
-                            <option value= "Ladrillo sin efecto diafragma">Ladrillo sin efecto diafragma</option>
-                            <option value= "Mamposteria">Mampostería</option>
-                            <option value= "Porticos de Hormigon Armado CON diseño sismorresistente">Porticos de Hormigon Armado con diseño sismorresistente</option>
-                            <option value= "Porticos de Hormigon Armado SIN diseño sismorresistente">Porticos de Hormigon Armado sin diseño sismorresistente</option>
+                          <select name="material" id = "material" class="form-control selectpicker" title="${config.valuematerial}" >
+                            <option value="0" >Selecciona un tipo de material</option>
+                            <option id="Material1" value= "Ladrillo con efecto diafragma">Ladrillo con efecto diafragma</option>
+                            <option id="Material2" value= "Ladrillo sin efecto diafragma">Ladrillo sin efecto diafragma</option>
+                            <option id="Material3" value= "Mamposteria">Mampostería</option>
+                            <option id="Material4" value= "Porticos de Hormigon Armado CON diseño sismorresistente">Porticos de Hormigon Armado con diseño sismorresistente</option>
+                            <option id="Material5" value= "Porticos de Hormigon Armado SIN diseño sismorresistente">Porticos de Hormigon Armado sin diseño sismorresistente</option>
                           </select>
                         </div>
                       </div>
@@ -112,26 +111,25 @@
                   <!-- Numero de pisos-->
 
                   <div class="form-group">
-                        <label class="col-md-6 control-label">Número de pisos</label>
-                          <div class="col-md-6 inputGroupContainer">
-                          <div class="input-group">
-                              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                              <input name="pisos" id="pisos" class="form-control" type="number" onkeydown="return false" min="1" max="14" value="1">
-
-                          </div>
+                        <label class="col-md-6 control-label" title="${config.infofloors}">${config.floors}</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input name="pisos" id="pisos" class="form-control" type="number" onkeydown="return false" min="1" max="14" value="${config.valuefloors}">
+                            </div>
                         </div>
-                      </div>
+                  </div>
 
                   <!-- Valor de mercado-->
 
                   <div class="form-group">
-                    <label class="col-md-6 control-label">Valor de mercado</label>
+                    <label class="col-md-6 control-label" title="${config.infomarket}">${config.market}</label>
                       <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
                           <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
-                          <input name="valor" id="mercado" placeholder="Introduce un valor" class="form-control" type="text">
+                          <input name="valor" id="mercado" placeholder="Introduce un valor" class="form-control" type="text" value="${config.valuemarket}">
                       </div>
-                      <p class="help-block">Introduce un valor inferior a 1000000 €.</p>
+                      <p class="help-block">${config.helpmarket}</p>
                     </div>
                   </div>
 

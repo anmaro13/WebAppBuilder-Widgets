@@ -69,21 +69,21 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input class="form-control" data-dojo-attach-point="textNode">
+                          <input class="form-control" type="text" data-dojo-attach-point="insyear">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Año comienzo de la Póliza" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoinsyear">
                       </div>
                   </div>
                   <div></div>
                   <label  class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <select class="form-control selectpicker" >
-                          <option value="" >Selecciona un año</option>
+                        <select class="form-control selectpicker" data-dojo-attach-point="valueinsyear">
+                          <option value="0" >Selecciona un año</option>
                           <option value= "2015">2015</option>
                           <option value = "2016">2016</option>
                           <option value= "2017">2017</option>
@@ -98,21 +98,21 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Tipo de Edificio" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="building">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Tipo de Edificio" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infobuilding">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <select class="form-control selectpicker" >
-                          <option value="" >Selecciona un tipo de edificio</option>
-                          <option value="Piso/Apartamento">Piso o Apartamento</option>
+                        <select class="form-control selectpicker" data-dojo-attach-point="valuebuilding">
+                          <option value="0" >Selecciona un tipo de edificio</option>
+                          <option value="Piso o Apartamento">Piso o Apartamento</option>
                           <option value="Vivienda Unifamiliar">Vivienda Unifamiliar</option>
                         </select>
                       </div>
@@ -125,19 +125,25 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Año de construcción" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="consyear">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Año de construcción" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoconsyear">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Texto de ayuda: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input  class="form-control" type="text" data-dojo-attach-point="helpconsyear">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <input placeholder="Introduce un año" max="2014" min="1800" class="form-control" type="text" pattern="/[1][8|9][0-9][0-9]|[2][0][1][4]/">
+                        <input placeholder="Introduce un año" max="2014" min="1800" class="form-control" type="text" pattern="/[1][8|9][0-9][0-9]|[2][0][1][4]/" data-dojo-attach-point="valueconsyear">
                       </div>
                   </div>
 
@@ -148,19 +154,25 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Superficie de la vivienda" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="housespace">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Superficie de la vivienda" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infohousespace">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Texto de ayuda: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="helphousespace">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <input placeholder="Introduce los m2" max="500" min="20" class="form-control" type="text" pattern="/[2-9][0-9]|[1-4][0-9][0-9]|[5][0][0]">
+                        <input placeholder="Introduce los m2" max="500" min="20" class="form-control" type="text" pattern="/[2-9][0-9]|[1-4][0-9][0-9]|[5][0][0]" data-dojo-attach-point="valuehousespace">
                       </div>
                   </div>
 
@@ -171,26 +183,26 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Peligrosidad" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="quakedanger">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Peligrosidad" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoquakedanger">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <select class="form-control selectpicker" >
-                          <option value="" >Selecciona una peligrosidad</option>
-                          <option value= "Baja">Baja</option>
-                          <option value= "Baja-Media">Baja-Media</option>
-                          <option value= "Media">Media</option>
-                          <option value ="Media-Alta">Media-Alta</option>
-                          <option value = "Alta">Alta</option>
-                          <option value = "Muy Alta">Muy Alta</option>
+                        <select class="form-control selectpicker" data-dojo-attach-point="valuequakedanger">
+                          <option value="0" >Selecciona una peligrosidad</option>
+                          <option value="Baja">Baja</option>
+                          <option value="Baja-Media">Baja-Media</option>
+                          <option value="Media">Media</option>
+                          <option value="Media-Alta">Media-Alta</option>
+                          <option value="Alta">Alta</option>
+                          <option value="Muy Alta">Muy Alta</option>
                         </select>
                       </div>
                   </div>
@@ -202,20 +214,20 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Tipo de Material" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="consmaterial">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Tipo de Material" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoconsmaterial">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <select class="form-control selectpicker" >
-                          <option value="" >Selecciona un tipo de material</option>
+                        <select class="form-control selectpicker" data-dojo-attach-point="valueconsmaterial" >
+                          <option value="0" >Selecciona un tipo de material</option>
                           <option value= "Ladrillo con efecto diafragma">Ladrillo con efecto diafragma</option>
                           <option value= "Ladrillo sin efecto diafragma">Ladrillo sin efecto diafragma</option>
                           <option value= "Mamposteria">Mampostería</option>
@@ -231,19 +243,19 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Número de pisos" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="numberfloors">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Número de pisos" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infonumberfloors">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <input class="form-control" type="number" onkeydown="return false" min="1" max="14" value="1">
+                        <input class="form-control" type="number" onkeydown="return false" min="1" max="14" data-dojo-attach-point="valuenumberfloors">
                       </div>
                   </div>
 
@@ -253,19 +265,25 @@
                   <label class="col-md-6 control-label">Etiqueta: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value="Valor de Mercado" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="pricemarket">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Información: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                          <input  value= "Valor de Mercado" class="form-control" type="text">
+                          <input class="form-control" type="text" data-dojo-attach-point="infopricemarket">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Texto de ayuda: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="helppricemarket">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Valor Predeterminado: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
-                        <input placeholder="Introduce un valor" class="form-control" type="text">
+                        <input placeholder="Introduce un valor" class="form-control" type="text" data-dojo-attach-point="valuepricemarket">
                       </div>
                   </div>
 
