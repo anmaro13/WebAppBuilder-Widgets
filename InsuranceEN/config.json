@@ -1,0 +1,75 @@
+{
+  "iyear": "Year Expected Policy Start",
+  "infoiyear": "Rates are based on a calendar year. To get an accurate policy estimate, please choose the year your policy is expected to start",
+  "valueiyear": "2016",
+
+  "build": "Type of building",
+  "infobuild": "Choose the type of building where to apply the insurance",
+  "valuebuild": "Apartment",
+
+  "cyear": "Construction Year",
+  "infocyear": "Construction Year of the building",
+  "helpcyear": "Enter a value between 1800 and 2014.",
+  "valuecyear": "1980",
+
+  "space": "Area of the home",
+  "infospace": "Square meters of a house",
+  "helpspace": "Enter a value between 20 and 500 m2.",
+  "valuespace": "150",
+
+  "danger": "Earthquake Hazard",
+  "infodanger": "Level of hazard in buildings in the event of a earthquake",
+  "valuedanger": "Medium-High",
+
+  "material": "Type of material",
+  "infomaterial": "Type of construction materials of the building",
+  "valuematerial": "Brick without diagram effect",
+
+  "floors": "Number of floors",
+  "infofloors": "Number of Stories of the building",
+  "valuefloors": "2",
+
+  "market": "Market Value",
+  "infomarket": "Market Value of Home",
+  "helpmarket": "Enter a value lower than 1000000 €.",
+  "valuemarket": "150000",
+
+  "deductible": "Deductible",
+  "infodeductible": "Choose a deductible that is 5%, 10%, 15%, 20%, or 25% for your personal property coverage",
+  "valuedeductible": "5%",
+
+  "objecttext": "Coverage for breakable items?",
+  "infoobject": "This endorsement provides coverage for breakable items that are otherwise excluded, such as glassware, crystal, and china up to the personal property coverage limit.",
+  "visobj":"optional1",
+  "object":"cheked",
+  "objection":" ",
+
+  "persontext": "Coverage for personal property?",
+  "infoperson": "Covers the personal contents in your home such as electronics, furniture and appliances.",
+  "vispers":"optional3",
+  "person":"cheked",
+  "personal":" ",
+  "propervalue":"Value of Coverage for personal property",
+  "valueperson": "0",
+
+  "temporaltext": "Coverage for loss-of-use?",
+  "infotemporal": "Loss of Use (Costs exceeding your current housing expenses, to live elsewhere if your home is uninhabitable after an earthquake.)",
+  "vistemp":"optional6",
+  "tempo":"cheked",
+  "temporal":" ",
+  "inhabivalue": "Value of Coverage for loss-of-use",
+  "valuetemporal": "0",
+
+  "customertext": "Customer's situation",
+  "infocustomer": "If you want to know the customer's situation",
+  "custom":"optional9",
+  "custo":"cheked",
+  "customer":" ",
+  "customervalue":"Type of insurance engaged by the customer",
+  "insuran1": "checked",
+  "insuran2": "checked",
+  "insuran3": "checked"
+
+
+
+}

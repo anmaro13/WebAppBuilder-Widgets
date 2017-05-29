@@ -1,0 +1,337 @@
+
+<div class="container">
+
+            <fieldset class="well form-horizontal" id="insurance_form">
+
+              <!-- Form Name -->
+
+              <legend class="col-md-8 tittle">Home Insurance Calculator</legend>
+
+              <!-- The First Interface-->
+              <div id="interface1">
+
+                  <!-- Year Expected Policy Start-->
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" title="${config.infoiyear}">${config.iyear}</label>
+                      <div class="col-md-6 selectContainer">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                      <select name="policy" id ="iyear" class="form-control selectpicker" title="${config.valueiyear}" >
+                        <option value="0" >Select a Year</option>
+                        <option id="2015" value="2015">2015</option>
+                        <option id="2016" value="2016">2016</option>
+                        <option id="2017" value="2017">2017</option>
+                      </select>
+                      </div>
+                      </div>
+                  </div>
+
+                  <!-- Type of building-->
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" title="${config.infobuild}">${config.build}</label>
+                      <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select name="building" id="building" class="form-control selectpicker" title="${config.valuebuild}">
+                          <option value="0" >Select a type of building</option>
+                          <option id="Apartment" value="Apartment">Apartment</option>
+                          <option id="SingleHome" value="Single-Family Home">Single-Family Home</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Construction Year-->
+
+                  <div class="form-group">
+                      <label class="col-md-6 control-label" title="${config.infocyear}">${config.cyear}</label>
+                        <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="year" id ="cyear" placeholder="Enter a year" max="2014" min="1800" class="form-control" type="text" pattern="/[1][8|9][0-9][0-9]|[2][0][1][4]/" value="${config.valuecyear}">
+                        </div>
+                        <p class="help-block">${config.helpcyear}</p>
+                      </div>
+                    </div>
+
+                  <!-- Area of the home-->
+
+                  <div class="form-group">
+                      <label class="col-md-6 control-label" title="${config.infospace}">${config.space}</label>
+                        <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="area" id = "area" placeholder="Enter m2" max="500" min="20" class="form-control" type="text" pattern="/[2-9][0-9]|[1-4][0-9][0-9]|[5][0][0]" value="${config.valuespace}">
+                        </div>
+                        <p class="help-block">${config.helpspace}</p>
+                        </div>
+                    </div>
+
+                  <!-- Earthquake Hazard-->
+
+                  <div class="form-group">
+                      <label class="col-md-6 control-label" title="${config.infodanger}">${config.danger}</label>
+                      <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select name="danger" id="danger" class="form-control selectpicker" title="${config.valuedanger}" >
+                          <option value="0" >Select a hazard level</option>
+                          <option id="Low" value="Low">Low</option>
+                          <option id="Low-Medium" value="Low-Medium">Low-Medium</option>
+                          <option id="Medium" value="Medium">Medium</option>
+                          <option id="Medium-High" value="Medium-High">Medium-High</option>
+                          <option id="High" value="High">High</option>
+                          <option id="Very High" value="Very High">Very High</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Type of material-->
+
+                  <div class="form-group">
+                        <label class="col-md-6 control-label" title="${config.infomaterial}">${config.material}</label>
+                        <div class="col-md-6 inputGroupContainer">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                          <select name="material" id = "material" class="form-control selectpicker" title="${config.valuematerial}" >
+                            <option value= "0" >Select a type of material</option>
+                            <option id= "Material1" value= "Brick with diagram effect">Brick with diagram effect</option>
+                            <option id= "Material2" value= "Brick without diagram effect">Brick without diagram effect</option>
+                            <option id= "Material3" value= "Masonry">Masonry</option>
+                            <option id= "Material4" value= "Concrete Porticoes with Earthquake Resistant design">Concrete Porticoes with Earthquake Resistant design</option>
+                            <option id= "Material5" value= "Concrete Porticoes without Earthquake Resistant design">Concrete Porticoes without Earthquake Resistant design</option>
+                          </select>
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- Number of floors-->
+
+                  <div class="form-group">
+                        <label class="col-md-6 control-label" title="${config.infofloors}">${config.floors}</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input name="floors" id="floors" class="form-control" type="number" onkeydown="return false" min="1" max="14" value="${config.valuefloors}">
+                            </div>
+                        </div>
+                  </div>
+
+                  <!-- Market Value-->
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" title="${config.infomarket}">${config.market}</label>
+                      <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
+                          <input name="market" id="market" placeholder="Enter the data" class="form-control" type="text" value="${config.valuemarket}">
+                      </div>
+                      <p class="help-block">${config.helpmarket}</p>
+                    </div>
+                  </div>
+
+                  <!-- Next Button -->
+                  <div class="form-group">
+
+                    <label class="col-md-6 control-label">
+                    <div>
+                      <img  class ="image" src="images/logo1.png">
+                    </div></label>
+                    <div class="col-md-6">
+                      <button id="next" class="btn btn-primary" data-dojo-attach-event="onclick:change"><span class="glyphicon glyphicon-play-circle"></span> Next </button>
+                    </div>
+
+                  </div>
+
+              </div>
+
+              <!-- The Second Interface-->
+              <div id="interface2">
+
+                  <!-- Deductible-->
+
+                  <div class="form-group">
+                      <label class="col-md-6 control-label" title="${config.infodeductible}">${config.deductible}</label>
+                      <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select name="deductible" id = "deductible" class="form-control selectpicker" title="${config.valuedeductible}" >
+                          <option value= "0" >Select a Percentage</option>
+                          <option id="5" value= "5%">5%</option>
+                          <option id="10" value= "10%">10%</option>
+                          <option id="15" value= "15%">15%</option>
+                          <option id="20" value= "20%">20%</option>
+                          <option id="25" value= "25%">25%</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Coverage for breakable items -->
+
+                  <div class="form-group" id="${config.visobj}">
+                          <div>
+                            <label class="col-md-6 control-label" title="${config.infoobject}">${config.objecttext}</label>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="radio-inline">
+                                  <label>
+                                      <input type="radio" name="items" id="items" ${config.object} value="true" /> Si
+                                  </label>
+                              </div>
+                              <div class="radio-inline">
+                                  <label>
+                                      <input type="radio" name="items" id="items1" ${config.objection} value="false"/> No
+                                  </label>
+                              </div>
+                            </div>
+                    </div>
+
+                  <!-- Coverage for personal property -->
+
+                  <div class="form-group" id="${config.vispers}">
+                     <label class="col-md-6 control-label" title="${config.infoperson}">${config.persontext}</label>
+                     <div class="col-md-6">
+                       <div class="radio-inline">
+                           <label>
+                               <input type="radio" name="property" id="property" value="true" ${config.person} data-dojo-attach-event="onclick:property"/> Si
+                           </label>
+                       </div>
+                       <div class="radio-inline">
+                           <label>
+                               <input type="radio" name="property" id="property1" value="false" ${config.personal} data-dojo-attach-event="onclick:property"/> No
+                           </label>
+                       </div>
+                     </div>
+                  </div>
+
+                  <!-- Value of Coverage for personal property-->
+
+                  <div class="form-group" id="optional5">
+                    <label class="col-md-6 control-label">${config.propervalue}</label>
+                    <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                      <select name="personalvalue" class="form-control selectpicker" id="personalvalue" title="${config.valueperson}" disabled>
+                         <option value="0" >Select a value</option>
+                         <option id="5000" value="5000">5.000€</option>
+                         <option id="10000" value="10000">10.000€</option>
+                         <option id="15000" value="15000">15.000€</option>
+                         <option id="20000" value="20000">20.000€</option>
+                         <option id="25000" value="25000">25.000€</option>
+                      </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Coverage for loss-of-use -->
+
+                  <div class="form-group" id="${config.vistemp}">
+                   <label class="col-md-6 control-label" title="${config.infotemporal}">${config.temporaltext}</label>
+                   <div class="col-md-6">
+                     <div class="radio-inline">
+                         <label>
+                             <input type="radio" name="inhabitability" id="inhabitability" value="true" ${config.tempo} data-dojo-attach-event="onclick:inhabitability"/> Si
+                         </label>
+                     </div>
+                     <div class="radio-inline">
+                         <label>
+                             <input type="radio" name="inhabitability" id="inhabitability1" value="false" ${config.temporal} data-dojo-attach-event="onclick:inhabitability"/> No
+                         </label>
+                     </div>
+                   </div>
+                  </div>
+
+                  <!-- Value of Coverage for loss-of-use-->
+
+                  <div class="form-group" id="optional8">
+                    <label class="col-md-6 control-label">${config.inhabivalue}</label>
+                    <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                      <select name="inhabitabilityvalue" class="form-control selectpicker" id="inhabitabilityvalue" title="${config.valuetemporal}" disabled>
+                         <option value="0" >Select a value</option>
+                         <option id="1.000" value="1000">1.000€</option>
+                         <option id="5.000" value="5000">5.000€</option>
+                         <option id="10.000" value="10000">10.000€</option>
+                         <option id="20.000" value="20000">20.000€</option>
+                      </select>
+                      </div>
+                  </div>
+                  </div>
+
+                  <!-- Customer-->
+
+                  <div class="form-group" id="${config.custom}">
+                    <label class="col-md-6 control-label" title="${config.infocustomer}">${config.customertext}</label>
+                    <div class="col-md-6">
+                        <div class="radio-inline">
+                          <label>
+                            <input type="radio" name="customer" id="customer" value="true" ${config.custo} data-dojo-attach-event="onclick:customer"/> Si
+                          </label>
+                        </div>
+                        <div class="radio-inline">
+                          <label>
+                            <input type="radio" name="customer" id="customer1" value="false" ${config.customer} data-dojo-attach-event="onclick:customer"/> No
+                          </label>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Type of insurance -->
+
+                  <div class="form-group">
+                        <label class="col-md-6 control-label">${config.customervalue}</label>
+                        <div class="col-md-6">
+                            <div class="checkbox">
+                                <label><input name="lifeinsurance" type="checkbox" id="insurance1" ${config.insuran1} disabled>Life Insurance</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input name="automobileinsurance" type="checkbox" id="insurance2" ${config.insuran2} disabled>Automobile Insurance</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input name="deathinsurance" type="checkbox" id="insurance3" ${config.insuran3} disabled>Death Insurance</label>
+                            </div>
+                        </div>
+
+                  </div>
+
+
+                  <!-- Previous Button -->
+                  <div class="form-group">
+
+                    <label class="col-md-6 control-label">
+                    <div>
+                      <img  class ="image" src="images/logo1.png">
+                    </div></label>
+                    <div class="col-md-6">
+                      <button id="previous" class="btn btn-primary" data-dojo-attach-event="onclick:change"><span class="glyphicon glyphicon-play-circle"></span><a href="#interfaz1"></a> Previous </button>
+                      <button id="hotspotButton" class="btn btn-primary" data-dojo-attach-event="onclick:calculator"><span class="glyphicon glyphicon-play-circle"></span> Execute </button>
+                    </div>
+
+                  </div>
+
+                  <!-- Mensajes -->
+                  <div class="form-group">
+                      <div class="col-md-12" id="status"></div>
+                      <div class="col-md-12" id="error" ></div>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="col-md-6">
+
+                          <div id="legendDiv" ></div>
+
+                      </div>
+                      <div class="col-md-6">
+                            <div id="controls">
+                            </div>
+                      </div>
+                  </div>
+              </div>
+
+            </fieldset>
+        </div>
