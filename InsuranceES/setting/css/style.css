@@ -140,7 +140,7 @@ fieldset {
 
 label.col-md-6 {
   text-align: left;
-  width: 32%; }
+  width: 40%; }
 
 .form-horizontal .control-label, .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
   margin-top: 0;
@@ -163,7 +163,7 @@ label.col-md-6 {
   position: relative;
   z-index: 2;
   float: left;
-  width: 360px;
+  width: 330px;
   margin-bottom: 0; }
 
 .input-group-addon {

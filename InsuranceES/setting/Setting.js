@@ -117,13 +117,16 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
       this.personcoverage.value = config.persontext;
       this.infopersoncoverage.value = config.infoperson;
       this.valuepersoncoverage.value = config.valueperson;
+      this.propertycoverage.value = config.propervalue;
 
       this.temporalcoverage.value = config.temporaltext;
       this.infotemporalcoverage.value = config.infotemporal;
       this.valuetemporalcoverage.value = config.valuetemporal;
+      this.inhabitabilitycoverage.value = config.inhabivalue;
 
       this.clientecoverage.value = config.clientetext;
       this.infoclientecoverage.value = config.infocliente;
+      this.customercoverage.value = config.customervalue;
 
     },
 
@@ -238,6 +241,34 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
             }
         }
 
+        var Insurance1Button= document.getElementById("insurance1");
+          if(Insurance1Button.checked){
+                this.insurance1value.value = "checked";
+                var insu1 = this.insurance1value.value;
+            }else{
+              this.insurance1value.value = " ";
+              var insu1 = this.insurance1value.value;
+            }
+
+        var Insurance2Button= document.getElementById("insurance2");
+            if(Insurance2Button.checked){
+                  this.insurance2value.value = "checked";
+                  var insu2 = this.insurance2value.value;
+              }else{
+                this.insurance2value.value = " ";
+                var insu2 = this.insurance2value.value;
+              }
+
+        var Insurance3Button= document.getElementById("insurance3");
+            if(Insurance3Button.checked){
+                  this.insurance3value.value = "checked";
+                  var insu3 = this.insurance3value.value;
+              }else{
+                  this.insurance3value.value = " ";
+                  var insu3 = this.insurance3value.value;
+              }
+
+
       return {
         iyear: this.insyear.value,
         infoiyear: this.infoinsyear.value,
@@ -290,6 +321,7 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
         person: per,
         personal: pers,
         valueperson: this.valuepersoncoverage.value,
+        propervalue: this.propertycoverage.value,
 
         temporaltext: this.temporalcoverage.value,
         infotemporal: this.infotemporalcoverage.value,
@@ -297,12 +329,17 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
         tempo: tem,
         temporal: temp,
         valuetemporal: this.valuetemporalcoverage.value,
+        inhabivalue: this.inhabitabilitycoverage.value,
 
         clientetext: this.clientecoverage.value,
         infocliente: this.infoclientecoverage.value,
         client: visiblecli,
         clien: cli,
-        cliente: clie
+        cliente: clie,
+        customervalue: this.customercoverage.value,
+        insuran1: insu1,
+        insuran2: insu2,
+        insuran3: insu3
       };
 
     },
@@ -311,6 +348,7 @@ function (declare, registry, dom, on, domUtils, _WidgetsInTemplateMixin, BaseWid
       if (document.getElementById("interfacedescription").offsetParent===null){
         document.getElementById("interfacedescription").style.display="block";
         document.getElementById("interfaceanio").style.display="none";
+        document.getElementById("interfaceedificio").style.display="none";
         document.getElementById("interfaceconstruccion").style.display="none";
         document.getElementById("interfacesuperficie").style.display="none";
         document.getElementById("interfacepeligrosidad").style.display="none";

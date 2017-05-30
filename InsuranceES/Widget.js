@@ -78,6 +78,9 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
     },
 
     startup: function () {
+      this.temporal();
+      this.bienes();
+      this.cliente();
       var gpServiceUrl = "https://localhost:6443/arcgis/rest/services/Aseguradora/GPSeguros/GPServer/ScriptEdificios";
       this.gp = new Geoprocessor(gpServiceUrl);
       window.$app = {
@@ -158,24 +161,33 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
         document.getElementById("optional8").remove();
       }
 
-      if (dom.byId("coberturebienes").title === "5.000€"){
+      if (dom.byId("coberturebienes").title === "5000"){
         document.getElementById("5000").setAttribute('selected', '');
-        document.getElementById("coberturebienes").removeAttribute('disabled', '');
-      } else if(dom.byId("coberturebienes").title === "10.000€"){
+      } else if(dom.byId("coberturebienes").title === "10000"){
         document.getElementById("10000").setAttribute('selected', '');
-        document.getElementById("coberturebienes").removeAttribute('disabled', '');
-      }else if(dom.byId("coberturebienes").title === "15.000€"){
+      }else if(dom.byId("coberturebienes").title === "15000"){
         document.getElementById("15000").setAttribute('selected', '');
-        document.getElementById("coberturebienes").removeAttribute('disabled', '');
-      }else if(dom.byId("coberturebienes").title === "20.000€"){
         document.getElementById("20000").setAttribute('selected', '');
-        document.getElementById("coberturebienes").removeAttribute('disabled', '');
-      }else if(dom.byId("coberturebienes").title === "25.000€"){
+      }else if(dom.byId("coberturebienes").title === "25000"){
         document.getElementById("25000").setAttribute('selected', '');
-        document.getElementById("coberturebienes").removeAttribute('disabled', '');
+      }
+
+      if (dom.byId("coberturetemporal").title === "5000"){
+        document.getElementById("1.000").setAttribute('selected', '');
+      } else if(dom.byId("coberturetemporal").title === "15000"){
+        document.getElementById("5.000").setAttribute('selected', '');
+      }else if(dom.byId("coberturetemporal").title === "20000"){
+        document.getElementById("10.000").setAttribute('selected', '');
+      }else if(dom.byId("coberturetemporal").title === "25000"){
+        document.getElementById("20.000").setAttribute('selected', '');
       }
     },
 
+    onOpen: function (){
+      var share = this.map.getLayer("");
+      share.hide();
+
+    },
 
     calcularseguro: function() {
       var anio = dom.byId("anio").value;
@@ -295,7 +307,6 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
     },
 
     gpJobComplete: function (jobinfo) {
-      console.log(jobinfo);
       //get the result map service layer and add to map
       window.$app.gp.getResultImageLayer(jobinfo.jobId, null, null, function (layer) {
         if (window.$app.layer2) {

@@ -394,6 +394,12 @@
                         </div>
                       </div>
                   </div>
+                  <label class="col-md-6 control-label">Etiqueta valor de cobertura: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="propertycoverage">
+                      </div>
+                  </div>
                   <label class="col-md-6 control-label">Valor de la cobertura: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
@@ -444,6 +450,12 @@
                                 <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" data-dojo-attach-event="onclick:temporal" checked data-dojo-attach-point="covtemporal"/> No
                             </label>
                         </div>
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Etiqueta valor de cobertura: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="inhabitabilitycoverage">
                       </div>
                   </div>
                   <label class="col-md-6 control-label">Valor de la cobertura: </label>
@@ -497,17 +509,23 @@
                         </div>
                       </div>
                   </div>
+                  <label class="col-md-6 control-label">Etiqueta valor de cobertura: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="customercoverage">
+                      </div>
+                  </div>
                   <label class="col-md-6 control-label">Valor de la cobertura: </label>
                   <div class="col-md-6 inputGroupContainer">
                       <div class="input-group">
                         <div class="checkbox">
-                            <label><input name ="vida" type="checkbox" id="insurance1" disabled>Seguro de Vida</label>
+                            <label><input name ="vida" type="checkbox" id="insurance1" disabled data-dojo-attach-point="insurance1value">Seguro de Vida</label>
                         </div>
                         <div class="checkbox">
-                            <label><input name = "auto" type="checkbox" id="insurance2" disabled>Seguro de Automóvil</label>
+                            <label><input name = "auto" type="checkbox" id="insurance2" disabled data-dojo-attach-point="insurance2value">Seguro de Automóvil</label>
                         </div>
                         <div class="checkbox">
-                            <label><input name="decesos" type="checkbox" id="insurance3" disabled>Seguro de Decesos</label>
+                            <label><input name="decesos" type="checkbox" id="insurance3" disabled data-dojo-attach-point="insurance3value">Seguro de Decesos</label>
                         </div>
                       </div>
                   </div>

@@ -211,17 +211,17 @@
                   <!-- Valor de bienes personales-->
 
                   <div class="form-group" id="optional5">
-                    <label class="col-md-6 control-label">Valor de bienes personales</label>
+                    <label class="col-md-6 control-label">${config.propervalue}</label>
                     <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
                     <select name="personales" class="form-control selectpicker" id="coberturebienes" title="${config.valueperson}" disabled>
                      <option value="0" >Selecciona un valor</option>
-                     <option value="5000">5.000€</option>
-                     <option value="10000">10.000€</option>
-                     <option value="15000">15.000€</option>
-                     <option value="20000">20.000€</option>
-                     <option value="25000">25.000€</option>
+                     <option id="5000" value="5000">5.000€</option>
+                     <option id="10000" value="10000">10.000€</option>
+                     <option id="15000" value="15000">15.000€</option>
+                     <option id="20000" value="20000">20.000€</option>
+                     <option id="25000" value="25000">25.000€</option>
                     </select>
                     </div>
                     </div>
@@ -248,16 +248,16 @@
                   <!-- Valor de inhabitabilidad temporal-->
 
                   <div class="form-group" id="optional8">
-                    <label class="col-md-6 control-label">Valor de inhabitabilidad temporal</label>
+                    <label class="col-md-6 control-label">${config.inhabivalue}</label>
                     <div class="col-md-6 inputGroupContainer">
                     <div class="input-group">
                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
                     <select name="temporal" class="form-control selectpicker" id="coberturetemporal" title="${config.valuetemporal}" disabled>
                      <option value="0" >Selecciona un valor</option>
-                     <option id="1000" value="1000">1.000€</option>
-                     <option id="5000" value="5000">5.000€</option>
-                     <option id="10000" value="10000">10.000€</option>
-                     <option id="20000" value="20000">20.000€</option>
+                     <option id="1.000" value="1000">1.000€</option>
+                     <option id="5.000" value="5000">5.000€</option>
+                     <option id="10.000" value="10000">10.000€</option>
+                     <option id="20.000" value="20000">20.000€</option>
                     </select>
                     </div>
                   </div>
@@ -282,16 +282,16 @@
 
                   <!-- Tipo de seguro -->
                   <div class="form-group">
-                        <label class="col-md-6 control-label">Tipo de Seguro contratado por el cliente</label>
+                        <label class="col-md-6 control-label">${config.customervalue}</label>
                         <div class="col-md-6">
                             <div class="checkbox">
-                                <label><input name ="vida" type="checkbox" id="insurance1" disabled>Seguro de Vida</label>
+                                <label><input name ="vida" type="checkbox" id="insurance1" ${config.insuran1} disabled>Seguro de Vida</label>
                             </div>
                             <div class="checkbox">
-                                <label><input name = "auto" type="checkbox" id="insurance2" disabled>Seguro de Automóvil</label>
+                                <label><input name = "auto" type="checkbox" id="insurance2" ${config.insuran2} disabled>Seguro de Automóvil</label>
                             </div>
                             <div class="checkbox">
-                                <label><input name="decesos" type="checkbox" id="insurance3" disabled>Seguro de Decesos</label>
+                                <label><input name="decesos" type="checkbox" id="insurance3" ${config.insuran3} disabled>Seguro de Decesos</label>
                             </div>
                         </div>
 
