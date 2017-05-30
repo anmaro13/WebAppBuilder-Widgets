@@ -28,7 +28,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
       if(radioButtons[1].value==="false"){
         if(radioButtons[1].checked){
           document.getElementById("coberturebienes").setAttribute('disabled', '');
-          $("#coberturebienes").val('0');
+          $("#coberturebienes").val(' ');
         }else{
           document.getElementById("coberturebienes").removeAttribute('disabled');
           }
@@ -45,7 +45,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
       if(radioButtons[1].value==="false"){
         if(radioButtons[1].checked){
           document.getElementById("coberturetemporal").setAttribute('disabled', '');
-          $("#coberturetemporal").val('0');
+          $("#coberturetemporal").val(' ');
         }else{
           document.getElementById("coberturetemporal").removeAttribute('disabled');
           }
@@ -183,10 +183,14 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
       }
     },
 
-    onOpen: function (){
-      var share = this.map.getLayer("");
+    onOpen: function(){
+      var share = this.map.getLayer("Edificios_seguro_165");
       share.hide();
+    },
 
+    onClose: function(){
+      var share = this.map.getLayer("Edificios_seguro_165");
+      share.show();
     },
 
     calcularseguro: function() {
