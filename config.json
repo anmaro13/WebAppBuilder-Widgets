@@ -139,8 +139,7 @@
         },
         "id": "widgets_Coordinate_Widget_27",
         "name": "Coordinate",
-        "version": "2.3",
-        "config": "configs/Coordinate/config_Coordinate.json"
+        "version": "2.3"
       },
       {
         "uri": "widgets/Scalebar/Widget",
@@ -164,20 +163,6 @@
         "id": "widgets_Splash_Widget_29",
         "name": "Splash",
         "config": "configs/Splash/config_Splash.json"
-      },
-      {
-        "position": {
-          "left": 10,
-          "bottom": 195,
-          "relativeTo": "map"
-        },
-        "placeholderIndex": 1,
-        "id": "_31",
-        "version": "2.3",
-        "closeable": true,
-        "uri": "widgets/Seguro/Widget",
-        "name": "Seguro",
-        "IsController": false
       },
       {
         "position": {
@@ -222,7 +207,7 @@
       "right": 0,
       "bottom": 0
     },
-    "itemId": "d12a9628341e40dd9ed2c4eb441b93b9",
+    "itemId": "18f1063a470e4eae988030e896fcd154",
     "mapOptions": {},
     "id": "map",
     "portalUrl": "https://geoquakepfm.maps.arcgis.com"
@@ -240,7 +225,8 @@
         "version": "2.3",
         "id": "widgets_Legend_Widget_17",
         "name": "Legend",
-        "index": 2
+        "index": 2,
+        "config": "configs/Legend/config_Legend.json"
       },
       {
         "uri": "widgets/LayerList/Widget",
@@ -259,20 +245,29 @@
         "id": "widgets_Query_Widget_34"
       },
       {
-        "name": "Select",
-        "version": "2.3",
-        "uri": "widgets/Select/Widget",
-        "config": "configs/Select/config_Select.json",
-        "index": 5,
-        "id": "widgets_Select_Widget_35"
-      },
-      {
         "name": "Print",
         "version": "2.3",
         "uri": "widgets/Print/Widget",
         "config": "configs/Print/config_Print.json",
-        "index": 6,
+        "index": 5,
         "id": "widgets_Print_Widget_36"
+      },
+      {
+        "name": "Select",
+        "version": "2.3",
+        "uri": "widgets/Select/Widget",
+        "config": "configs/Select/config_Select.json",
+        "index": 6,
+        "id": "widgets_Select_Widget_37"
+      },
+      {
+        "name": "SeguroES",
+        "version": "2.3",
+        "IsController": false,
+        "uri": "widgets/SeguroES/Widget",
+        "config": "configs/SeguroES/config_SeguroES.json",
+        "index": 8,
+        "id": "widgets_SeguroES_Widget_38"
       }
     ],
     "groups": []
@@ -430,18 +425,15 @@
     }
   },
   "loadingPage": {
-    "backgroundColor": "#ffffff",
+    "backgroundColor": "#50c97c",
     "backgroundImage": {
-      "visible": true,
-      "uri": "configs/loading/images/background.png",
-      "width": 400,
-      "height": 73
+      "visible": false
     },
     "loadingGif": {
       "visible": true,
-      "uri": "configs/loading/images/loading.gif",
-      "width": 330,
-      "height": 188
+      "uri": "/webappbuilder/apps/5/configs/loading/images/predefined_loading_4.gif",
+      "width": 34,
+      "height": 34
     }
   },
   "wabVersion": "2.3",

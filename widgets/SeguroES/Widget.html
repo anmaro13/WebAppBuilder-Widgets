@@ -1,0 +1,335 @@
+
+<div class="container">
+
+            <fieldset class="well form-horizontal" id="seguro_form">
+
+              <!-- Form Name -->
+
+              <legend class="col-md-8 tittle">Calculo del Seguro de Hogar</legend>
+
+              <!-- Primera Interfaz-->
+              <div id="interface1">
+
+                  <!-- Año de Poliza-->
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" title="${config.infoiyear}">${config.iyear}</label>
+                      <div class="col-md-6 selectContainer">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                      <select name="poliza" id ="anio" class="form-control selectpicker" title="${config.valueiyear}" >
+                        <option value="0" >Selecciona un año</option>
+                        <option id="2015" value="2015">2015</option>
+                        <option id="2016" value="2016">2016</option>
+                        <option id="2017" value="2017">2017</option>
+                      </select>
+                      </div>
+                      </div>
+                  </div>
+
+                  <!-- Tipo de edificio-->
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" title="${config.infobuild}">${config.build}</label>
+                      <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select name="edificio" id="edificio" class="form-control selectpicker" title="${config.valuebuild}">
+                          <option value="0" >Selecciona un tipo de edificio</option>
+                          <option id="build1" value="Piso o Apartamento">Piso o Apartamento</option>
+                          <option id="build2" value="Vivienda Unifamiliar">Vivienda Unifamiliar</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Año construccion-->
+
+                  <div class="form-group">
+                      <label class="col-md-6 control-label" title="${config.infocyear}">${config.cyear}</label>
+                        <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="anio" id ="construccion" placeholder="Introduce un año" max="2014" min="1800" class="form-control" type="text" pattern="/[1][8|9][0-9][0-9]|[2][0][1][4]/" value="${config.valuecyear}">
+                        </div>
+                        <p class="help-block">${config.helpcyear}</p>
+                      </div>
+                    </div>
+
+                  <!-- Superficie-->
+
+                  <div class="form-group">
+                      <label class="col-md-6 control-label" title="${config.infospace}">${config.space}</label>
+                        <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="superficie" id = "superficie" placeholder="Introduce los m2" max="500" min="20" class="form-control" type="text" pattern="/[2-9][0-9]|[1-4][0-9][0-9]|[5][0][0]" value="${config.valuespace}">
+                        </div>
+                        <p class="help-block">${config.helpspace}</p>
+                        </div>
+                    </div>
+
+                  <!-- Peligrosidad-->
+
+                  <div class="form-group">
+                      <label class="col-md-6 control-label" title="${config.infodanger}">${config.danger}</label>
+                      <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select name="peligrosidad" id="peligrosidad" class="form-control selectpicker" title="${config.valuedanger}" >
+                          <option value="0" >Selecciona una peligrosidad</option>
+                          <option id="Baja" value="Baja">Baja</option>
+                          <option id="Baja-Media" value="Baja-Media">Baja-Media</option>
+                          <option id="Media" value="Media">Media</option>
+                          <option id="Media-Alta" value="Media-Alta">Media-Alta</option>
+                          <option id="Alta" value="Alta">Alta</option>
+                          <option id="Muy Alta" value="Muy Alta">Muy Alta</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tipo de material-->
+
+                  <div class="form-group">
+                        <label class="col-md-6 control-label" title="${config.infomaterial}">${config.material}</label>
+                        <div class="col-md-6 inputGroupContainer">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                          <select name="material" id = "material" class="form-control selectpicker" title="${config.valuematerial}" >
+                            <option value= "0" >Selecciona un tipo de material</option>
+                            <option id= "Material1" value= "Ladrillo con efecto diafragma">Ladrillo con efecto diafragma</option>
+                            <option id= "Material2" value= "Ladrillo sin efecto diafragma">Ladrillo sin efecto diafragma</option>
+                            <option id= "Material3" value= "Mamposteria">Mampostería</option>
+                            <option id= "Material4" value= "Porticos de Hormigon Armado CON diseño sismorresistente">Porticos de Hormigon Armado con diseño sismorresistente</option>
+                            <option id= "Material5" value= "Porticos de Hormigon Armado SIN diseño sismorresistente">Porticos de Hormigon Armado sin diseño sismorresistente</option>
+                          </select>
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- Numero de pisos-->
+
+                  <div class="form-group">
+                        <label class="col-md-6 control-label" title="${config.infofloors}">${config.floors}</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input name="pisos" id="pisos" class="form-control" type="number" onkeydown="return false" min="1" max="14" value="${config.valuefloors}">
+                            </div>
+                        </div>
+                  </div>
+
+                  <!-- Valor de mercado-->
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" title="${config.infomarket}">${config.market}</label>
+                      <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
+                          <input name="valor" id="mercado" placeholder="Introduce un valor" class="form-control" type="text" value="${config.valuemarket}">
+                      </div>
+                      <p class="help-block">${config.helpmarket}</p>
+                    </div>
+                  </div>
+
+                  <!-- Button -->
+                  <div class="form-group">
+
+                    <label class="col-md-6 control-label">
+                    <div>
+                      <img  class ="image" src="images/logo1.png">
+                    </div></label>
+                    <div class="col-md-6">
+                      <button id="next" class="btn btn-primary" data-dojo-attach-event="onclick:change"><span class="glyphicon glyphicon-play-circle"></span> Siguiente </button>
+                    </div>
+
+                  </div>
+
+              </div>
+
+              <!-- Segunda Interfaz-->
+              <div id="interface2">
+
+                  <!-- Deductible-->
+
+                  <div class="form-group">
+                      <label class="col-md-6 control-label" title="${config.infodeductible}">${config.deductible}</label>
+                      <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select name="deductible" id = "deductible" class="form-control selectpicker" title="${config.valuedeductible}" >
+                          <option value= "0" >Selecciona un porcentaje</option>
+                          <option id="5" value= "5%">5%</option>
+                          <option id="10" value= "10%">10%</option>
+                          <option id="15" value= "15%">15%</option>
+                          <option id="20" value= "20%">20%</option>
+                          <option id="25" value= "25%">25%</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cobertura objetos fragiles -->
+
+                  <div class="form-group" id="${config.visobj}">
+                          <div>
+                            <label class="col-md-6 control-label" title="${config.infoobject}">${config.objecttext}</label>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="radio-inline">
+                                  <label>
+                                      <input type="radio" name="objetos" id="objetos" ${config.object} value="true" /> Si
+                                  </label>
+                              </div>
+                              <div class="radio-inline">
+                                  <label>
+                                      <input type="radio" name="objetos" id="objetos1" ${config.objection} value="false"/> No
+                                  </label>
+                              </div>
+                            </div>
+                    </div>
+
+                  <!-- Cobertura de bienes personales -->
+
+                  <div class="form-group" id="${config.vispers}">
+                     <label class="col-md-6 control-label" title="${config.infoperson}">${config.persontext}</label>
+                     <div class="col-md-6">
+                       <div class="radio-inline">
+                           <label>
+                               <input type="radio" name="bienes" id="bienes" value="true" ${config.person} data-dojo-attach-event="onclick:bienes"/> Si
+                           </label>
+                       </div>
+                       <div class="radio-inline">
+                           <label>
+                               <input type="radio" name="bienes" id="bienes1" value="false" ${config.personal} data-dojo-attach-event="onclick:bienes"/> No
+                           </label>
+                       </div>
+                     </div>
+                  </div>
+
+                  <!-- Valor de bienes personales-->
+
+                  <div class="form-group" id="optional5">
+                    <label class="col-md-6 control-label">${config.propervalue}</label>
+                    <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                       <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="personales" class="form-control selectpicker" id="coberturebienes" title="${config.valueperson}" disabled>
+                     <option value=" ">Selecciona un valor</option>
+                     <option id="5000" value="5000">5.000€</option>
+                     <option id="10000" value="10000">10.000€</option>
+                     <option id="15000" value="15000">15.000€</option>
+                     <option id="20000" value="20000">20.000€</option>
+                     <option id="25000" value="25000">25.000€</option>
+                    </select>
+                    </div>
+                    </div>
+                  </div>
+
+                  <!-- Cobertura de inhabitabilidad temporal -->
+
+                  <div class="form-group" id="${config.vistemp}">
+                   <label class="col-md-6 control-label" title="${config.infotemporal}">${config.temporaltext}</label>
+                   <div class="col-md-6">
+                     <div class="radio-inline">
+                         <label>
+                             <input type="radio" name="inhabitabilidad" id = "temporal" value="true" ${config.tempo} data-dojo-attach-event="onclick:temporal"/> Si
+                         </label>
+                     </div>
+                     <div class="radio-inline">
+                         <label>
+                             <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" ${config.temporal} data-dojo-attach-event="onclick:temporal"/> No
+                         </label>
+                     </div>
+                   </div>
+                  </div>
+
+                  <!-- Valor de inhabitabilidad temporal-->
+
+                  <div class="form-group" id="optional8">
+                    <label class="col-md-6 control-label">${config.inhabivalue}</label>
+                    <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                       <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="temporal" class="form-control selectpicker" id="coberturetemporal" title="${config.valuetemporal}" disabled>
+                     <option value=" ">Selecciona un valor</option>
+                     <option id="1.000" value="1000">1.000€</option>
+                     <option id="5.000" value="5000">5.000€</option>
+                     <option id="10.000" value="10000">10.000€</option>
+                     <option id="20.000" value="20000">20.000€</option>
+                    </select>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- Cliente-->
+                  <div class="form-group" id="${config.client}">
+                    <label class="col-md-6 control-label" title="${config.infocliente}">${config.clientetext}</label>
+                    <div class="col-md-6">
+                        <div class="radio-inline">
+                          <label>
+                            <input type="radio" name="cliente" id = "cliente" value="true" ${config.clien} data-dojo-attach-event="onclick:cliente"/> Si
+                          </label>
+                        </div>
+                        <div class="radio-inline">
+                          <label>
+                            <input type="radio" name="cliente" id="cliente1" value="false" ${config.cliente} data-dojo-attach-event="onclick:cliente"/> No
+                          </label>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Tipo de seguro -->
+                  <div class="form-group" id="optional11">
+                        <label class="col-md-6 control-label">${config.customervalue}</label>
+                        <div class="col-md-6">
+                            <div class="checkbox">
+                                <label><input name ="vida" type="checkbox" id="insurance1" ${config.insuran1} disabled>Seguro de Vida</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input name = "auto" type="checkbox" id="insurance2" ${config.insuran2} disabled>Seguro de Automóvil</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input name="decesos" type="checkbox" id="insurance3" ${config.insuran3} disabled>Seguro de Decesos</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                  <!-- Button -->
+                  <div class="form-group">
+
+                    <label class="col-md-6 control-label">
+                    <div>
+                      <img  class ="image" src="images/logo1.png">
+                    </div></label>
+                    <div class="col-md-6">
+                      <button id="before" class="btn btn-primary" data-dojo-attach-event="onclick:change"><span class="glyphicon glyphicon-play-circle"></span><a href="#interfaz1"></a> Anterior </button>
+                      <button id="hotspotButton" class="btn btn-primary" data-dojo-attach-event="onclick:calcularseguro"><span class="glyphicon glyphicon-play-circle"></span> Ejecutar </button>
+                    </div>
+
+                  </div>
+
+                  <!-- Mensajes -->
+                  <div class="form-group">
+                      <div class="col-md-12" id="status"></div>
+                      <div class="col-md-12" id="error" ></div>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="col-md-6">
+
+                          <div id="legendDiv" ></div>
+
+                      </div>
+                      <div class="col-md-6">
+                            <div id="controls">
+                            </div>
+                      </div>
+                  </div>
+              </div>
+
+            </fieldset>
+        </div>

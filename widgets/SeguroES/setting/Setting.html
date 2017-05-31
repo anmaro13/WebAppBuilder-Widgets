@@ -1,0 +1,543 @@
+<div class="container">
+        <legend class="col-md-8 tittle">Configuración del Widget</legend>
+            <fieldset class="well-left form-horizontal">
+              <div class="form-group">
+                <div class="collapse">
+                    <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Descripcion" data-dojo-props="title: 'Descripción'" type="button">Descripción</button>
+                    <div class="panelbody" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Entrada'">
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Anio">
+                        <label class= "control-label">Año de comienzo de la póliza</label>
+                      </button>
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Edificio">
+                        <label class= "control-label">Tipo de Edificio</label>
+                      </button>
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Construccion">
+                        <label class= "control-label">Año de construcción</label>
+                      </button>
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Superficie">
+                        <label class= "control-label">Superficie de la vivienda</label>
+                      </button>
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Peligrosidad">
+                        <label class= "control-label">Peligrosidad</label>
+                      </button>
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Material">
+                        <label class= "control-label">Tipo de material</label>
+                      </button>
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Pisos">
+                        <label class= "control-label">Número de pisos</label>
+                      </button>
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Mercado">
+                        <label class= "control-label">Valor de mercado</label>
+                      </button>
+                      <button class="btn obli" data-dojo-attach-event="onclick: onClick_Deductible">
+                        <label class= "control-label">Deductible</label>
+                      </button>
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Objetos">
+                        <label class= "control-label">Cobertura de objetos frágiles*</label>
+                      </button>
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Personales">
+                        <label class= "control-label">Cobertura de bienes personales*</label>
+                      </button>
+                      <button class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Temporal">
+                        <label class= "control-label">Cobertura por inhabitabilidad temporal*</label>
+                      </button>
+                      <button id="Cliente" class="btn obli" data-dojo-attach-event="onclick: onClick_Cliente">
+                        <label class= "control-label">Cliente</label>
+                      </button>
+                    </div>
+                    <div class = "panelbody" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Salida'">
+                      <button id="salida" class="btn btn-primary" data-dojo-attach-event="onclick: onClick_Salida">
+                        <label class= "control-label">Capa de Salida</label>
+                      </button>
+                    </div>
+
+                </div>
+              </div>
+
+            </fieldset>
+
+            <fieldset class="well-right form-horizontal">
+              <div class="form-group" id="interfacedescription">
+                  <h4 class="contact-subtitle-1" id="title"><i class="fa fa-map"></i>&nbsp;   Finalidad</h4>
+                  <p>Cálculo del Seguro de Hogar</p>
+                  <h4 class="contact-subtitle-1"><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp; Descripción</h4>
+                  <p>El objetivo del widget es obtener el valor de la prima de Seguro de Hogar anual, teniendo en cuenta el factor de peligrosidad
+                    de los edificios ante una catástrofe natural </p>
+              </div>
+
+              <div class="form-group" id="interfaceanio">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="insyear">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoinsyear">
+                      </div>
+                  </div>
+                  <div></div>
+                  <label  class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <select class="form-control selectpicker" data-dojo-attach-point="valueinsyear">
+                          <option value="0" >Selecciona un año</option>
+                          <option value= "2015">2015</option>
+                          <option value = "2016">2016</option>
+                          <option value= "2017">2017</option>
+                        </select>
+                      </div>
+                  </div>
+
+
+              </div>
+
+              <div class="form-group" id="interfaceedificio">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="building">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infobuilding">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <select class="form-control selectpicker" data-dojo-attach-point="valuebuilding">
+                          <option value="0" >Selecciona un tipo de edificio</option>
+                          <option value="Piso o Apartamento">Piso o Apartamento</option>
+                          <option value="Vivienda Unifamiliar">Vivienda Unifamiliar</option>
+                        </select>
+                      </div>
+                  </div>
+
+
+              </div>
+
+              <div class="form-group" id="interfaceconstruccion">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="consyear">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoconsyear">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Texto de ayuda: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input  class="form-control" type="text" data-dojo-attach-point="helpconsyear">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <input placeholder="Introduce un año" max="2014" min="1800" class="form-control" type="text" pattern="/[1][8|9][0-9][0-9]|[2][0][1][4]/" data-dojo-attach-point="valueconsyear">
+                      </div>
+                  </div>
+
+
+              </div>
+
+              <div class="form-group" id="interfacesuperficie">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="housespace">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infohousespace">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Texto de ayuda: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="helphousespace">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <input placeholder="Introduce los m2" max="500" min="20" class="form-control" type="text" pattern="/[2-9][0-9]|[1-4][0-9][0-9]|[5][0][0]" data-dojo-attach-point="valuehousespace">
+                      </div>
+                  </div>
+
+
+              </div>
+
+              <div class="form-group" id="interfacepeligrosidad">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="quakedanger">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoquakedanger">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <select class="form-control selectpicker" data-dojo-attach-point="valuequakedanger">
+                          <option value="0" >Selecciona una peligrosidad</option>
+                          <option value="Baja">Baja</option>
+                          <option value="Baja-Media">Baja-Media</option>
+                          <option value="Media">Media</option>
+                          <option value="Media-Alta">Media-Alta</option>
+                          <option value="Alta">Alta</option>
+                          <option value="Muy Alta">Muy Alta</option>
+                        </select>
+                      </div>
+                  </div>
+
+
+              </div>
+
+              <div class="form-group" id="interfacematerial">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="consmaterial">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoconsmaterial">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <select class="form-control selectpicker" data-dojo-attach-point="valueconsmaterial" >
+                          <option value="0" >Selecciona un tipo de material</option>
+                          <option value= "Ladrillo con efecto diafragma">Ladrillo con efecto diafragma</option>
+                          <option value= "Ladrillo sin efecto diafragma">Ladrillo sin efecto diafragma</option>
+                          <option value= "Mamposteria">Mampostería</option>
+                          <option value= "Porticos de Hormigon Armado CON diseño sismorresistente">Porticos de Hormigon Armado con diseño sismorresistente</option>
+                          <option value= "Porticos de Hormigon Armado SIN diseño sismorresistente">Porticos de Hormigon Armado sin diseño sismorresistente</option>
+                        </select>
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="form-group" id="interfacepisos">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="numberfloors">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infonumberfloors">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <input class="form-control" type="number" onkeydown="return false" min="1" max="14" data-dojo-attach-point="valuenumberfloors">
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="form-group" id="interfacemercado">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="pricemarket">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infopricemarket">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Texto de ayuda: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="helppricemarket">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <input placeholder="Introduce un valor" class="form-control" type="text" data-dojo-attach-point="valuepricemarket">
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="form-group" id="interfacedeductible">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input  value="Deductible" class="form-control" type="text" data-dojo-attach-point="taxdeductible">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input  value= "Deductible" class="form-control" type="text" data-dojo-attach-point="infotaxdeductible">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <select class="form-control selectpicker" data-dojo-attach-point="valuetaxdeductible">
+                          <option value="" >Selecciona un porcentaje </option>
+                          <option value = "5%">5%</option>
+                          <option value = "10%">10%</option>
+                          <option value = "15%">15%</option>
+                          <option value = "20%">20%</option>
+                          <option value = "25%">25%</option>
+                        </select>
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="form-group" id="interfaceobjetos">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="objectcoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoobjectcoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Visible: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="visiobject" data-dojo-attach-point="visibleobj" checked hidden>
+                          <label class="onoffswitch-label" for="visiobject"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                        </div>
+                    </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer move">
+                      <div class="input-group">
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="objetos" id="objetos" value="true" checked data-dojo-attach-point="covobject" /> Si
+                            </label>
+                        </div>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="objetos" id="objetos1" value="false" data-dojo-attach-point="covobjection"/> No
+                            </label>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group" id="interfacepersonales">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="personcoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infopersoncoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Visible: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="visiperson" data-dojo-attach-point="visiblepers" checked hidden>
+                          <label class="onoffswitch-label" for="visiperson"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                        </div>
+                    </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer move">
+                      <div class="input-group">
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="bienes" id="bienes" value="true" data-dojo-attach-event="onclick: onClick_bienes" data-dojo-attach-point="covperson"/> Si
+                            </label>
+                        </div>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="bienes" id ="bienes1" value="false" data-dojo-attach-event="onclick: onClick_bienes" checked data-dojo-attach-point="covpersonal"/> No
+                            </label>
+                        </div>
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Etiqueta valor de cobertura: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="propertycoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor de la cobertura: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <select name="personales" class="form-control selectpicker" id="coberturebienes" disabled data-dojo-attach-point="valuepersoncoverage">
+                         <option value="0" >Selecciona un valor</option>
+                         <option id="5000" value="5000">5.000€</option>
+                         <option id="10000" value="10000">10.000€</option>
+                         <option id="15000" value="15000">15.000€</option>
+                         <option id="20000" value="20000">20.000€</option>
+                         <option id="25000" value="25000">25.000€</option>
+                        </select>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group" id="interfacetemporal">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="temporalcoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infotemporalcoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Visible: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="visitempo" data-dojo-attach-point="visibletemp" checked hidden>
+                          <label class="onoffswitch-label" for="visitempo"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                        </div>
+                    </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer move">
+                      <div class="input-group">
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="inhabitabilidad" id = "temporal" value="true" data-dojo-attach-event="onclick:temporal" data-dojo-attach-point="covtempo"/> Si
+                            </label>
+                        </div>
+                        <div class="radio-inline">
+                            <label>
+                                <input type="radio" name="inhabitabilidad" id = "temporal1" value="false" data-dojo-attach-event="onclick:temporal" checked data-dojo-attach-point="covtemporal"/> No
+                            </label>
+                        </div>
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Etiqueta valor de cobertura: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="inhabitabilitycoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor de la cobertura: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <select name="temporal" class="form-control selectpicker" id="coberturetemporal" disabled data-dojo-attach-point="valuetemporalcoverage">
+                         <option value="0" >Selecciona un valor</option>
+                         <option value="1000">1.000€</option>
+                         <option value="5000">5.000€</option>
+                         <option value="10000">10.000€</option>
+                         <option value="20000">20.000€</option>
+                        </select>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group" id="interfacecliente">
+                  <label class="col-md-6 control-label">Etiqueta: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input  class="form-control" type="text" data-dojo-attach-point="clientecoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Información: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="infoclientecoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Visible: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="visiclient" data-dojo-attach-point="visiblecliente" checked hidden>
+                          <label class="onoffswitch-label" for="visiclient"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                        </div>
+                    </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor Predeterminado: </label>
+                  <div class="col-md-6 inputGroupContainer move">
+                      <div class="input-group">
+                        <div class="radio-inline">
+                          <label>
+                            <input type="radio" name="cliente" id="cliente" value="true" data-dojo-attach-event="onclick:cliente" data-dojo-attach-point="covclien"/> Si
+                          </label>
+                        </div>
+                        <div class="radio-inline">
+                          <label>
+                            <input type="radio" name="cliente" id="cliente1" value="false" data-dojo-attach-event="onclick:cliente" checked data-dojo-attach-point="covcliente"/> No
+                          </label>
+                        </div>
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Etiqueta valor de cobertura: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                          <input class="form-control" type="text" data-dojo-attach-point="customercoverage">
+                      </div>
+                  </div>
+                  <label class="col-md-6 control-label">Valor de la cobertura: </label>
+                  <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <div class="checkbox">
+                            <label><input name ="vida" type="checkbox" id="insurance1" disabled data-dojo-attach-point="insurance1value">Seguro de Vida</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input name = "auto" type="checkbox" id="insurance2" disabled data-dojo-attach-point="insurance2value">Seguro de Automóvil</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input name="decesos" type="checkbox" id="insurance3" disabled data-dojo-attach-point="insurance3value">Seguro de Decesos</label>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                <div>
+                  <img  class ="image" src="/webappbuilder/stemapp/widgets/Seguro/images/logo1.png">
+                </div>
+              </div>
+
+
+            </fieldset>
+
+</div>

@@ -1,0 +1,74 @@
+{
+  "iyear": "Año comienzo de poliza",
+  "infoiyear": "Año en que comienza la póliza de tu seguro",
+  "valueiyear": "2016",
+
+  "build": "Tipo de edificio",
+  "infobuild": "El tipo de edificio en el que aplicar el seguro",
+  "valuebuild": "Piso o Apartamento",
+
+  "cyear": "Año de construcción",
+  "infocyear": "El año en que se construyó el edificio",
+  "helpcyear": "Introduce un valor entre el año 1800 y el 2014.",
+  "valuecyear": "1980",
+
+  "space": "Superficie de la vivienda",
+  "infospace": "Los metros cuadrados de la vivienda",
+  "helpspace": "Introduce un valor entre 20 y 500 m2.",
+  "valuespace": "150",
+
+  "danger": "Peligrosidad",
+  "infodanger": "La peligrosidad que presenta el edificio ante terremoto",
+  "valuedanger": "Media-Alta",
+
+  "material": "Tipo de material",
+  "infomaterial": "Tipo de material de construcción de los edificios",
+  "valuematerial": "Ladrillo sin efecto diafragma",
+
+  "floors": "Número de pisos",
+  "infofloors": "Número de pisos del edificio",
+  "valuefloors": "2",
+
+  "market": "Valor de mercado",
+  "infomarket": "Valor de mercado de la vivienda",
+  "helpmarket": "Introduce un valor inferior a 1000000 €.",
+  "valuemarket": "150000",
+
+  "deductible": "Deductible",
+  "infodeductible": "Deductible del seguro",
+  "valuedeductible": "5%",
+
+  "objecttext": "¿Cobertura de objetos frágiles?",
+  "infoobject": "Valor de la cobertura de objetos",
+  "visobj":"optional1",
+  "object":"cheked",
+  "objection":" ",
+
+  "persontext": "¿Cobertura de bienes personales?",
+  "infoperson": "Valor de la cobertura de bienes personales",
+  "vispers":"optional3",
+  "person":"cheked",
+  "personal":" ",
+  "propervalue":"Valor de la cobertura de bienes personales",
+  "valueperson": "0",
+
+  "temporaltext": "¿Cobertura por inhabitabilidad temporal?",
+  "infotemporal": "Valor de la cobertura de inhabitabilidad temporal",
+  "vistemp":"optional6",
+  "tempo":"cheked",
+  "temporal":" ",
+  "inhabivalue": "Valor de la cobertura de inhabitabilidad temporal",
+  "valuetemporal": "0",
+
+  "clientetext": "¿Es cliente nuestro?",
+  "infocliente": "Si deseas evaluar la situación del cliente",
+  "client":"optional9",
+  "clien":"cheked",
+  "cliente":" ",
+  "customervalue":"Tipo de Seguro",
+  "insuran1": "checked",
+  "insuran2": "checked",
+  "insuran3": "checked"
+
+
+}

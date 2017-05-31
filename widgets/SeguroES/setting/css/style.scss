@@ -1,0 +1,409 @@
+.jimu-widget-avuxi-setting{
+  margin:0;
+  padding:0;
+  font-size:15px;
+}
+
+.jimu-widget-avuxi-setting .setting-table > thead > tr > th,.jimu-widget-avuxi-setting .setting-table > tbody > tr > td{
+  height:40px;
+  line-height:40px;
+  vertical-align:middle;
+}
+
+.jimu-widget-avuxi-setting .input-table > tbody > tr > .first{
+  width:auto;
+  text-align: right;
+  padding-right:15px;
+}
+
+.jimu-widget-avuxi-setting .input-table > tbody > tr > .second{
+  width:200px;
+}
+
+.jimu-widget-avuxi-setting .input-table > tbody > tr > .third{
+  width:35px;
+}
+
+.well-left {
+    width: 300px;
+    max-height: 435px;
+    overflow: auto;
+    position: absolute;
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.well-right {
+    width:600px;
+    margin-left: 350px;
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.tittle {
+    width: 100%;
+}
+
+legend {
+    color: rgba(0,157,0,0.56);
+    font-weight: bold;
+}
+
+.collapse {
+    color: #595959;
+    background-color: #f8f8f8;
+    border-color: #ccc;
+    padding: 10px 15px;
+    width: 310px;
+    height: 500px;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  color: rgba(0,157,0,0.56);
+  font-family: 'opensans-bold', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 6px;
+}
+
+p {
+  font: 15px/25px 'opensans-light', sans-serif;
+  margin-left: 10px;
+}
+
+#dijit_TitlePane_1_titleBarNode {
+    color: #595959;
+    background-color: #f8f8f8;
+    border-color: #ccc;
+}
+
+#dijit_TitlePane_0_titleBarNode {
+    color: #595959;
+    background-color: #f8f8f8;
+    border-color: #ccc;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+.image{
+    width: 129px;
+    float: right;
+    top: 12px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.help-block {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      color: #737373;
+}
+
+fieldset {
+    display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+}
+
+.col-md-6{
+position: relative;
+width: 50%;
+padding-bottom: 10px;
+min-height: 1px;
+padding-left: 15px;
+padding-right: 15px;
+float: left;
+
+}
+
+.radio-inline, .checkbox-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+label.col-md-6{
+  text-align: left;
+  width: 40%;
+}
+
+.form-horizontal .control-label, .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 7px;
+}
+
+
+.form-horizontal .form-group {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.input-group-addon:first-child {
+    border-right: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 330px;
+    margin-bottom: 0;
+
+}
+
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: table-cell;
+}
+
+.input-group-addon, .input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.input-group {
+    border-collapse: separate;
+    display: table-cell;
+}
+
+
+.glyphicon-list:before {
+    content: "\e056";
+  }
+
+.form-control {
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#Cliente  {
+  margin-bottom: 0px;
+}
+
+#salida {
+  margin-bottom: 0px;
+}
+
+.col-md-6 .inputGroupContainer {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+.btn-primary:hover {
+    background-color: rgba(0,157,0,0.31);
+    border-color: #4c4c4c;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color: #ace5ac;
+    border-color: #129b1e;
+}
+
+.btn:hover, .btn:focus {
+    color: rgba(0,157,0,0.56);
+    text-decoration: none;
+}
+
+.btn-primary {
+    color:white;
+    background-color: rgba(0,157,0,0.56);
+    border-color: #4c4c4c;
+    background-image: linear-gradient(to bottom,rgba(0,157,0,0.56) 0,rgba(0,157,0,0.56) 100%);
+}
+
+.obli {
+    color:white;
+    background-color: rgba(128, 188, 128, 1);
+    border-color: #4c4c4c;
+    background-image: linear-gradient(to bottom,rgba(0,157,0,0.56) 0,rgba(0,157,0,0.56) 100%);
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: rgba(0,157,0,0.56); color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+#interfacedescripcion {
+  display:block;
+}
+
+#interfaceanio {
+  display:none;
+}
+
+#interfaceedificio {
+  display:none;
+}
+
+#interfaceconstruccion {
+  display:none;
+}
+
+#interfacesuperficie {
+  display:none;
+}
+
+#interfacepeligrosidad {
+  display:none;
+}
+
+#interfacematerial {
+  display:none;
+}
+
+#interfacepisos {
+  display:none;
+}
+
+#interfacemercado {
+  display:none;
+}
+
+#interfacedeductible {
+  display:none;
+}
+
+#interfaceobjetos {
+  display:none;
+}
+
+#interfacepersonales {
+  display:none;
+}
+
+#interfacetemporal {
+  display:none;
+}
+
+#interfacecliente {
+  display:none;
+}
+
+.move {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

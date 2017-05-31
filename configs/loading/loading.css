@@ -1,23 +1,20 @@
 #main-loading{
-	background-color:#ffffff;
+	background-color:#50c97c;
 	position:relative;
 }
 #main-loading #app-loading{
 	position: absolute;
-	background-image: url('images/background.png');
 	background-repeat: no-repeat;
-	width:400px;
-	height:73px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 #main-loading #loading-gif{
 	position: absolute;
-	background-image: url('images/loading.gif');
+	background-image: url('images/predefined_loading_4.gif');
 	background-repeat: no-repeat;
-	width:330px;
-	height:188px;
+	width:34px;
+	height:34px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);

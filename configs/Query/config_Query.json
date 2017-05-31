@@ -2,285 +2,9 @@
   "hideLayersAfterWidgetClosed": true,
   "queries": [
     {
-      "url": "https://localhost:6443/arcgis/rest/services/App_insurance/Edificios_insurance/FeatureServer/0",
-      "name": "Valor de peligrosidad",
-      "icon": "/webappbuilder/apps/4//configs/Query/icon_1.png",
-      "filter": {
-        "logicalOperator": "AND",
-        "parts": [
-          {
-            "fieldObj": {
-              "name": "NB_Peligrosidad",
-              "label": "NB_Peligrosidad",
-              "shortType": "string",
-              "type": "esriFieldTypeString"
-            },
-            "operator": "stringOperatorIs",
-            "valueObj": {
-              "isValid": true,
-              "type": "unique",
-              "value": ""
-            },
-            "interactiveObj": {
-              "prompt": "Es",
-              "hint": "",
-              "cascade": "none"
-            },
-            "caseSensitive": false
-          }
-        ],
-        "expr": ""
-      },
-      "showSQL": false,
-      "spatialFilter": {
-        "currentMapExtent": null,
-        "drawing": null,
-        "useFeatures": null,
-        "fullLayerExtent": null
-      },
-      "popupInfo": {
-        "readFromWebMap": true
-      },
-      "orderByFields": [],
-      "useLayerSymbol": false,
-      "resultsSymbol": {
-        "color": [
-          0,
-          255,
-          0,
-          128
-        ],
-        "outline": {
-          "color": [
-            71,
-            105,
-            146,
-            255
-          ],
-          "width": 0.75,
-          "type": "esriSLS",
-          "style": "esriSLSSolid"
-        },
-        "type": "esriSFS",
-        "style": "esriSFSSolid"
-      },
-      "canModifySymbol": false,
-      "keepResultsOnMapAfterCloseWidget": true,
-      "enableExport": true,
-      "singleResultLayer": true,
-      "webMapLayerId": "Edificios_insurance_8890"
-    },
-    {
-      "url": "https://localhost:6443/arcgis/rest/services/App_insurance/Edificios_insurance/FeatureServer/0",
-      "name": "Tipo de edificio",
-      "icon": "/webappbuilder/apps/4//configs/Query/icon_2.png",
-      "filter": {
-        "logicalOperator": "AND",
-        "parts": [
-          {
-            "fieldObj": {
-              "name": "NB_TipoEdificio",
-              "label": "NB_TipoEdificio",
-              "shortType": "string",
-              "type": "esriFieldTypeString"
-            },
-            "operator": "stringOperatorIs",
-            "valueObj": {
-              "isValid": true,
-              "type": "unique",
-              "value": ""
-            },
-            "interactiveObj": {
-              "prompt": "Es",
-              "hint": "",
-              "cascade": "none"
-            },
-            "caseSensitive": false
-          }
-        ],
-        "expr": ""
-      },
-      "showSQL": false,
-      "spatialFilter": {
-        "currentMapExtent": null,
-        "drawing": null,
-        "useFeatures": null,
-        "fullLayerExtent": null
-      },
-      "popupInfo": {
-        "readFromWebMap": true
-      },
-      "orderByFields": [],
-      "useLayerSymbol": false,
-      "resultsSymbol": {
-        "color": [
-          0,
-          255,
-          0,
-          128
-        ],
-        "outline": {
-          "color": [
-            71,
-            105,
-            146,
-            255
-          ],
-          "width": 0.75,
-          "type": "esriSLS",
-          "style": "esriSLSSolid"
-        },
-        "type": "esriSFS",
-        "style": "esriSFSSolid"
-      },
-      "canModifySymbol": false,
-      "keepResultsOnMapAfterCloseWidget": true,
-      "enableExport": true,
-      "singleResultLayer": true,
-      "webMapLayerId": "Edificios_insurance_8890"
-    },
-    {
-      "url": "https://localhost:6443/arcgis/rest/services/App_insurance/Edificios_insurance/FeatureServer/0",
-      "name": "Año de construcción",
-      "icon": "${appPath}/configs/Query/icon_3.jpeg",
-      "filter": {
-        "logicalOperator": "AND",
-        "parts": [
-          {
-            "fieldObj": {
-              "name": "FC_Construccion",
-              "label": "FC_Construccion",
-              "shortType": "string",
-              "type": "esriFieldTypeString"
-            },
-            "operator": "stringOperatorIs",
-            "valueObj": {
-              "isValid": true,
-              "type": "value",
-              "value": ""
-            },
-            "interactiveObj": {
-              "prompt": "FC_Construccion es",
-              "hint": "Valores entre 1800 a 2014",
-              "cascade": "none"
-            },
-            "caseSensitive": false
-          }
-        ],
-        "expr": ""
-      },
-      "showSQL": false,
-      "spatialFilter": {
-        "currentMapExtent": null,
-        "drawing": null,
-        "useFeatures": null,
-        "fullLayerExtent": null
-      },
-      "popupInfo": {
-        "readFromWebMap": true
-      },
-      "orderByFields": [],
-      "useLayerSymbol": false,
-      "resultsSymbol": {
-        "color": [
-          0,
-          255,
-          0,
-          128
-        ],
-        "outline": {
-          "color": [
-            71,
-            105,
-            146,
-            255
-          ],
-          "width": 0.75,
-          "type": "esriSLS",
-          "style": "esriSLSSolid"
-        },
-        "type": "esriSFS",
-        "style": "esriSFSSolid"
-      },
-      "canModifySymbol": false,
-      "keepResultsOnMapAfterCloseWidget": true,
-      "enableExport": true,
-      "singleResultLayer": true,
-      "webMapLayerId": "Edificios_insurance_8890"
-    },
-    {
-      "url": "https://localhost:6443/arcgis/rest/services/App_insurance/Edificios_insurance/FeatureServer/0",
-      "name": "Material de construcción",
-      "icon": "${appPath}/configs/Query/icon_5.png",
-      "filter": {
-        "logicalOperator": "AND",
-        "parts": [
-          {
-            "fieldObj": {
-              "name": "NB_Material",
-              "label": "NB_Material",
-              "shortType": "string",
-              "type": "esriFieldTypeString"
-            },
-            "operator": "stringOperatorIs",
-            "valueObj": {
-              "isValid": true,
-              "type": "unique",
-              "value": ""
-            },
-            "interactiveObj": {
-              "prompt": "Escoge tipo de material",
-              "hint": "",
-              "cascade": "none"
-            },
-            "caseSensitive": false
-          }
-        ],
-        "expr": ""
-      },
-      "showSQL": false,
-      "spatialFilter": {
-        "currentMapExtent": null,
-        "drawing": null,
-        "useFeatures": null,
-        "fullLayerExtent": null
-      },
-      "popupInfo": {
-        "readFromWebMap": true
-      },
-      "orderByFields": [],
-      "useLayerSymbol": false,
-      "resultsSymbol": {
-        "color": [
-          0,
-          255,
-          0,
-          128
-        ],
-        "outline": {
-          "color": [
-            71,
-            105,
-            146,
-            255
-          ],
-          "width": 0.75,
-          "type": "esriSLS",
-          "style": "esriSLSSolid"
-        },
-        "type": "esriSFS",
-        "style": "esriSFSSolid"
-      },
-      "canModifySymbol": false,
-      "keepResultsOnMapAfterCloseWidget": true,
-      "enableExport": true,
-      "singleResultLayer": true,
-      "webMapLayerId": "Edificios_insurance_8890"
-    },
-    {
-      "url": "https://localhost:6443/arcgis/rest/services/App_insurance/Edificios_insurance/FeatureServer/0",
-      "name": "¿Clientes de nuestra compañía?",
-      "icon": "${appPath}/configs/Query/icon_4.png",
+      "url": "https://localhost:6443/arcgis/rest/services/Aseguradora/Edificios_seguro/FeatureServer/0",
+      "name": "Clientes de la compañia",
+      "icon": "${appPath}/configs/Query/icon_1.png",
       "filter": {
         "logicalOperator": "AND",
         "parts": [
@@ -298,7 +22,60 @@
               "value": ""
             },
             "interactiveObj": {
-              "prompt": "Clientes",
+              "prompt": "¿Son clientes?",
+              "hint": "",
+              "cascade": "none"
+            },
+            "caseSensitive": false
+          }
+        ],
+        "expr": ""
+      },
+      "showSQL": false,
+      "spatialFilter": {
+        "currentMapExtent": null,
+        "drawing": null,
+        "useFeatures": null,
+        "fullLayerExtent": null
+      },
+      "popupInfo": {
+        "readFromWebMap": true
+      },
+      "orderByFields": [
+        "BO_SeguroVida ASC",
+        "BO_SeguroAuto ASC",
+        "BO_SeguroDecesos ASC"
+      ],
+      "useLayerSymbol": true,
+      "resultsSymbol": null,
+      "canModifySymbol": false,
+      "keepResultsOnMapAfterCloseWidget": true,
+      "enableExport": true,
+      "singleResultLayer": true,
+      "webMapLayerId": "Edificios_seguro_9610"
+    },
+    {
+      "url": "https://localhost:6443/arcgis/rest/services/Aseguradora/Edificios_seguro/FeatureServer/0",
+      "name": "Material",
+      "icon": "${appPath}/configs/Query/icon_2.png",
+      "filter": {
+        "logicalOperator": "AND",
+        "parts": [
+          {
+            "fieldObj": {
+              "name": "NB_Material",
+              "label": "NB_Material",
+              "shortType": "string",
+              "type": "esriFieldTypeString"
+            },
+            "operator": "stringOperatorIs",
+            "valueObj": {
+              "isValid": true,
+              "type": "unique",
+              "value": ""
+            },
+            "interactiveObj": {
+              "prompt": "Material de construcción",
               "hint": "",
               "cascade": "none"
             },
@@ -318,33 +95,62 @@
         "readFromWebMap": true
       },
       "orderByFields": [],
-      "useLayerSymbol": false,
-      "resultsSymbol": {
-        "color": [
-          0,
-          255,
-          0,
-          128
-        ],
-        "outline": {
-          "color": [
-            71,
-            105,
-            146,
-            255
-          ],
-          "width": 0.75,
-          "type": "esriSLS",
-          "style": "esriSLSSolid"
-        },
-        "type": "esriSFS",
-        "style": "esriSFSSolid"
-      },
+      "useLayerSymbol": true,
+      "resultsSymbol": null,
       "canModifySymbol": false,
       "keepResultsOnMapAfterCloseWidget": true,
       "enableExport": true,
       "singleResultLayer": true,
-      "webMapLayerId": "Edificios_insurance_8890"
+      "webMapLayerId": "Edificios_seguro_9610"
+    },
+    {
+      "url": "https://localhost:6443/arcgis/rest/services/Aseguradora/Edificios_seguro/FeatureServer/0",
+      "name": "Tipos de edificios",
+      "icon": "${appPath}/configs/Query/icon_3.jpeg",
+      "filter": {
+        "logicalOperator": "AND",
+        "parts": [
+          {
+            "fieldObj": {
+              "name": "NB_TipoEdificio",
+              "label": "NB_TipoEdificio",
+              "shortType": "string",
+              "type": "esriFieldTypeString"
+            },
+            "operator": "stringOperatorIs",
+            "valueObj": {
+              "isValid": true,
+              "type": "unique",
+              "value": ""
+            },
+            "interactiveObj": {
+              "prompt": "Escoge una opción",
+              "hint": "",
+              "cascade": "previous"
+            },
+            "caseSensitive": false
+          }
+        ],
+        "expr": ""
+      },
+      "showSQL": false,
+      "spatialFilter": {
+        "currentMapExtent": null,
+        "drawing": null,
+        "useFeatures": null,
+        "fullLayerExtent": null
+      },
+      "popupInfo": {
+        "readFromWebMap": true
+      },
+      "orderByFields": [],
+      "useLayerSymbol": true,
+      "resultsSymbol": null,
+      "canModifySymbol": false,
+      "keepResultsOnMapAfterCloseWidget": true,
+      "enableExport": false,
+      "singleResultLayer": true,
+      "webMapLayerId": "Edificios_seguro_9610"
     }
   ]
 }

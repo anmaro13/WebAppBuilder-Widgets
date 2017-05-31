@@ -89,8 +89,9 @@ var ie = (function() {
       window.apiUrl + 'dojox/layout/resources/ResizeHandle.css',
       window.path + 'jimu.js/css/jimu-theme.css',
       window.path + 'libs/caja-html-sanitizer-minified.js',
-      // add a reference to the Bootstrap CSS
-      '//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'
+    '//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'
+
+
     ]);
 
     if (window.apiUrl.substr(window.apiUrl.length - 'arcgis-js-api/'.length,
@@ -138,11 +139,11 @@ var ie = (function() {
         name: "dynamic-modules",
         location: "dynamic-modules"
       },{
-            // add Dojo-Bootstrap if you want to use bootstrap comontents
-            // like tabs, dropdowns, modals, collapses, tooltips, etc
-            name: "bootstrap",
-            location: "//rawgit.com/xsokev/Dojo-Bootstrap/master"
-        }];
+          // add Dojo-Bootstrap if you want to use bootstrap comontents
+          // like tabs, dropdowns, modals, collapses, tooltips, etc
+          name: "bootstrap",
+          location: "//rawgit.com/xsokev/Dojo-Bootstrap/master"
+      }];
 
       resources.push(window.apiUrl + '/dojo/dojo.js');
     } else {
@@ -166,11 +167,11 @@ var ie = (function() {
         name: "configs",
         location: window.path + "configs"
       }, {
-            // add Dojo-Bootstrap if you want to use bootstrap comontents
-            // like tabs, dropdowns, modals, collapses, tooltips, etc
-            name: "bootstrap",
-            location: "//rawgit.com/xsokev/Dojo-Bootstrap/master"
-        }];
+          // add Dojo-Bootstrap if you want to use bootstrap comontents
+          // like tabs, dropdowns, modals, collapses, tooltips, etc
+          name: "bootstrap",
+          location: "//rawgit.com/xsokev/Dojo-Bootstrap/master"
+      }];
 
       resources.push(window.apiUrl + 'init.js');
     }

@@ -1,7 +1,7 @@
 {
   "selectionColor": "#00FFFF",
   "selectionMode": "partial",
-  "allowExport": true,
+  "allowExport": false,
   "geometryTypes": [
     "EXTENT"
   ]
