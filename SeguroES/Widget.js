@@ -1,83 +1,78 @@
-define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
-"esri/tasks/Geoprocessor", "esri/dijit/Legend", "dijit/form/TextBox", "dijit/form/NumberTextBox",
-"dijit/layout/BorderContainer", "dijit/layout/ContentPane", 'bootstrap/Dropdown', 'bootstrap/Tab',
-'bootstrap/Modal'], function (declare, BaseWidget, dom, domUtils, Geoprocessor, Legend) {
+define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils", "esri/tasks/Geoprocessor", "esri/dijit/Legend", "dijit/form/TextBox", "dijit/form/NumberTextBox", "dijit/layout/BorderContainer", "dijit/layout/ContentPane", 'bootstrap/Dropdown', 'bootstrap/Tab', 'bootstrap/Modal'], function (declare, BaseWidget, dom, domUtils, Geoprocessor, Legend) {
 
   return declare([BaseWidget], {
 
-
     baseClass: 'jimu-widget-seguro',
 
-    change: function(){
-        if (document.getElementById("interface1").style.display==="none"){
-          document.getElementById("interface1").style.display="block";
-          document.getElementById("interface2").style.display="none";
-        } else{
-          document.getElementById("interface1").style.display="none";
-          document.getElementById("interface2").style.display="block";
-        }
+    change: function change() {
+      if (document.getElementById("interface1").style.display === "none") {
+        document.getElementById("interface1").style.display = "block";
+        document.getElementById("interface2").style.display = "none";
+      } else {
+        document.getElementById("interface1").style.display = "none";
+        document.getElementById("interface2").style.display = "block";
+      }
     },
 
-    bienes: function(){
-      var radioButtons= document.getElementsByName("bienes");
-      if(radioButtons[0].value==="true"){
-        if(radioButtons[0].checked){
-        document.getElementById("coberturebienes").removeAttribute('disabled');
+    bienes: function bienes() {
+      var radioButtons = document.getElementsByName("bienes");
+      if (radioButtons[0].value === "true") {
+        if (radioButtons[0].checked) {
+          document.getElementById("coberturebienes").removeAttribute('disabled');
         }
       }
-      if(radioButtons[1].value==="false"){
-        if(radioButtons[1].checked){
+      if (radioButtons[1].value === "false") {
+        if (radioButtons[1].checked) {
           document.getElementById("coberturebienes").setAttribute('disabled', '');
           $("#coberturebienes").val(' ');
-        }else{
+        } else {
           document.getElementById("coberturebienes").removeAttribute('disabled');
-          }
-        }
-    },
-
-    temporal: function(){
-      var radioButtons= document.getElementsByName("inhabitabilidad");
-      if(radioButtons[0].value==="true"){
-        if(radioButtons[0].checked){
-        document.getElementById("coberturetemporal").removeAttribute('disabled');
         }
       }
-      if(radioButtons[1].value==="false"){
-        if(radioButtons[1].checked){
+    },
+
+    temporal: function temporal() {
+      var radioButtons = document.getElementsByName("inhabitabilidad");
+      if (radioButtons[0].value === "true") {
+        if (radioButtons[0].checked) {
+          document.getElementById("coberturetemporal").removeAttribute('disabled');
+        }
+      }
+      if (radioButtons[1].value === "false") {
+        if (radioButtons[1].checked) {
           document.getElementById("coberturetemporal").setAttribute('disabled', '');
           $("#coberturetemporal").val(' ');
-        }else{
+        } else {
           document.getElementById("coberturetemporal").removeAttribute('disabled');
-          }
-        }
-    },
-
-    cliente: function(){
-      var radioButtons= $('input[name=cliente]');
-      if(radioButtons[0].value==="true"){
-        if(radioButtons[0].checked){
-              //Habilitamos
-              document.getElementById("insurance1").removeAttribute('disabled');
-              document.getElementById("insurance2").removeAttribute('disabled');
-              document.getElementById("insurance3").removeAttribute('disabled');
-        }
-      }
-      if(radioButtons[1].value==="false"){
-        if(radioButtons[1].checked){
-              //Desabilitamos
-              document.getElementById("insurance1").setAttribute('disabled', '');
-              document.getElementById("insurance2").setAttribute('disabled', '');
-              document.getElementById("insurance3").setAttribute('disabled', '');
-              //Deschequeamos
-              $('#insurance1').prop('checked', false);
-              $('#insurance2').prop('checked', false);
-              $('#insurance3').prop('checked', false);
-
         }
       }
     },
 
-    startup: function () {
+    cliente: function cliente() {
+      var radioButtons = $('input[name=cliente]');
+      if (radioButtons[0].value === "true") {
+        if (radioButtons[0].checked) {
+          //Habilitamos
+          document.getElementById("insurance1").removeAttribute('disabled');
+          document.getElementById("insurance2").removeAttribute('disabled');
+          document.getElementById("insurance3").removeAttribute('disabled');
+        }
+      }
+      if (radioButtons[1].value === "false") {
+        if (radioButtons[1].checked) {
+          //Desabilitamos
+          document.getElementById("insurance1").setAttribute('disabled', '');
+          document.getElementById("insurance2").setAttribute('disabled', '');
+          document.getElementById("insurance3").setAttribute('disabled', '');
+          //Deschequeamos
+          $('#insurance1').prop('checked', false);
+          $('#insurance2').prop('checked', false);
+          $('#insurance3').prop('checked', false);
+        }
+      }
+    },
+
+    startup: function startup() {
       this.temporal();
       this.bienes();
       this.cliente();
@@ -89,111 +84,116 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
         layer2: this.layer2
       };
 
-      if (dom.byId("anio").title === "2015"){
+      if (dom.byId("anio").title === "2015") {
         document.getElementById("2015").setAttribute('selected', '');
-      } else if(dom.byId("anio").title === "2016"){
+      } else if (dom.byId("anio").title === "2016") {
         document.getElementById("2016").setAttribute('selected', '');
-      } else if(dom.byId("anio").title === "2017"){
+      } else if (dom.byId("anio").title === "2017") {
         document.getElementById("2017").setAttribute('selected', '');
       }
 
-      if (dom.byId("edificio").title === "Piso o Apartamento"){
+      if (dom.byId("edificio").title === "Piso o Apartamento") {
         document.getElementById("build1").setAttribute('selected', '');
-      } else if(dom.byId("edificio").title === "Vivienda Unifamiliar"){
+      } else if (dom.byId("edificio").title === "Vivienda Unifamiliar") {
         document.getElementById("build2").setAttribute('selected', '');
       }
 
-      if (dom.byId("peligrosidad").title === "Baja"){
+      if (dom.byId("peligrosidad").title === "Baja") {
         document.getElementById("Baja").setAttribute('selected', '');
-      } else if(dom.byId("peligrosidad").title === "Baja-Media"){
+      } else if (dom.byId("peligrosidad").title === "Baja-Media") {
         document.getElementById("Baja-Media").setAttribute('selected', '');
-      }else if(dom.byId("peligrosidad").title === "Media"){
+      } else if (dom.byId("peligrosidad").title === "Media") {
         document.getElementById("Media").setAttribute('selected', '');
-      }else if(dom.byId("peligrosidad").title === "Media-Alta"){
+      } else if (dom.byId("peligrosidad").title === "Media-Alta") {
         document.getElementById("Media-Alta").setAttribute('selected', '');
-      }else if(dom.byId("peligrosidad").title === "Alta"){
+      } else if (dom.byId("peligrosidad").title === "Alta") {
         document.getElementById("Alta").setAttribute('selected', '');
-      }else if(dom.byId("peligrosidad").title === "Muy Alta"){
+      } else if (dom.byId("peligrosidad").title === "Muy Alta") {
         document.getElementById("Muy Alta").setAttribute('selected', '');
       }
 
-      if (dom.byId("material").title === "Ladrillo con efecto diafragma"){
+      if (dom.byId("material").title === "Ladrillo con efecto diafragma") {
         document.getElementById("Material1").setAttribute('selected', '');
-      } else if(dom.byId("material").title === "Ladrillo sin efecto diafragma"){
+      } else if (dom.byId("material").title === "Ladrillo sin efecto diafragma") {
         document.getElementById("Material2").setAttribute('selected', '');
-      }else if(dom.byId("material").title === "Mamposteria"){
+      } else if (dom.byId("material").title === "Mamposteria") {
         document.getElementById("Material3").setAttribute('selected', '');
-      }else if(dom.byId("material").title === "Porticos de Hormigon Armado CON diseño sismorresistente"){
+      } else if (dom.byId("material").title === "Porticos de Hormigon Armado CON diseño sismorresistente") {
         document.getElementById("Material4").setAttribute('selected', '');
-      }else if(dom.byId("material").title === "Porticos de Hormigon Armado SIN diseño sismorresistente"){
+      } else if (dom.byId("material").title === "Porticos de Hormigon Armado SIN diseño sismorresistente") {
         document.getElementById("Material5").setAttribute('selected', '');
       }
 
-      if (dom.byId("deductible").title === "5%"){
+      if (dom.byId("deductible").title === "5%") {
         document.getElementById("5").setAttribute('selected', '');
-      } else if(dom.byId("deductible").title === "10%"){
+      } else if (dom.byId("deductible").title === "10%") {
         document.getElementById("10").setAttribute('selected', '');
-      }else if(dom.byId("deductible").title === "15%"){
+      } else if (dom.byId("deductible").title === "15%") {
         document.getElementById("15").setAttribute('selected', '');
-      }else if(dom.byId("deductible").title === "20%"){
+      } else if (dom.byId("deductible").title === "20%") {
         document.getElementById("20").setAttribute('selected', '');
-      }else if(dom.byId("deductible").title === "25%"){
+      } else if (dom.byId("deductible").title === "25%") {
         document.getElementById("25").setAttribute('selected', '');
       }
 
-      if (dom.byId("objetos").checked){
+      if (dom.byId("objetos").checked) {
         document.getElementById("objetos1").removeAttribute('checked');
-      } else if(dom.byId("objetos1").checked){
+      } else if (dom.byId("objetos1").checked) {
         document.getElementById("objetos").removeAttribute('checked');
       }
 
-      if (dom.byId("optional2")){
+      if (dom.byId("optional2")) {
         document.getElementById("optional2").remove();
       }
 
-      if (dom.byId("optional4")){
+      if (dom.byId("optional4")) {
         document.getElementById("optional4").remove();
         document.getElementById("optional5").remove();
       }
 
-      if (dom.byId("optional7")){
+      if (dom.byId("optional7")) {
         document.getElementById("optional7").remove();
         document.getElementById("optional8").remove();
       }
 
-      if (dom.byId("coberturebienes").title === "5000"){
+      if (dom.byId("optional10")) {
+        document.getElementById("optional10").remove();
+        document.getElementById("optional11").remove();
+      }
+
+      if (dom.byId("coberturebienes").title === "5000") {
         document.getElementById("5000").setAttribute('selected', '');
-      } else if(dom.byId("coberturebienes").title === "10000"){
+      } else if (dom.byId("coberturebienes").title === "10000") {
         document.getElementById("10000").setAttribute('selected', '');
-      }else if(dom.byId("coberturebienes").title === "15000"){
+      } else if (dom.byId("coberturebienes").title === "15000") {
         document.getElementById("15000").setAttribute('selected', '');
         document.getElementById("20000").setAttribute('selected', '');
-      }else if(dom.byId("coberturebienes").title === "25000"){
+      } else if (dom.byId("coberturebienes").title === "25000") {
         document.getElementById("25000").setAttribute('selected', '');
       }
 
-      if (dom.byId("coberturetemporal").title === "5000"){
+      if (dom.byId("coberturetemporal").title === "5000") {
         document.getElementById("1.000").setAttribute('selected', '');
-      } else if(dom.byId("coberturetemporal").title === "15000"){
+      } else if (dom.byId("coberturetemporal").title === "15000") {
         document.getElementById("5.000").setAttribute('selected', '');
-      }else if(dom.byId("coberturetemporal").title === "20000"){
+      } else if (dom.byId("coberturetemporal").title === "20000") {
         document.getElementById("10.000").setAttribute('selected', '');
-      }else if(dom.byId("coberturetemporal").title === "25000"){
+      } else if (dom.byId("coberturetemporal").title === "25000") {
         document.getElementById("20.000").setAttribute('selected', '');
       }
     },
 
-    onOpen: function(){
+    onOpen: function onOpen() {
       var share = this.map.getLayer("Edificios_seguro_165");
       share.hide();
     },
 
-    onClose: function(){
+    onClose: function onClose() {
       var share = this.map.getLayer("Edificios_seguro_165");
       share.show();
     },
 
-    calcularseguro: function() {
+    calcularseguro: function calcularseguro() {
       var anio = dom.byId("anio").value;
       var edificio = dom.byId("edificio").value;
       var construccion = dom.byId("construccion").value;
@@ -310,7 +310,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
       }
     },
 
-    gpJobComplete: function (jobinfo) {
+    gpJobComplete: function gpJobComplete(jobinfo) {
       //get the result map service layer and add to map
       window.$app.gp.getResultImageLayer(jobinfo.jobId, null, null, function (layer) {
         if (window.$app.layer2) {
@@ -355,7 +355,7 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
       });
     },
 
-    gpJobStatus: function (jobinfo) {
+    gpJobStatus: function gpJobStatus(jobinfo) {
       domUtils.show(dom.byId('status'));
       var jobstatus = '';
       var status = document.getElementById('status');
@@ -384,13 +384,13 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', "dojo/dom", "esri/domUtils",
       dom.byId('status').innerHTML = jobstatus;
     },
 
-    gpJobFailed: function(error) {
+    gpJobFailed: function gpJobFailed(error) {
       error = "Problemas técnicos, vuelve a intentarlo...";
       document.getElementById('status').className = "error";
       dom.byId('status').innerHTML = error;
     },
 
-    cleanup: function() {
+    cleanup: function cleanup() {
       //hide the legend and remove the existing hotspot layer
       domUtils.hide(dom.byId('legendDiv'));
       domUtils.hide(dom.byId('status'));

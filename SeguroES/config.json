@@ -49,7 +49,7 @@
   "vispers":"optional3",
   "person":"cheked",
   "personal":" ",
-  "propervalue":"Value of Coverage for personal property",
+  "propervalue":"Valor de la cobertura de bienes personales",
   "valueperson": "0",
 
   "temporaltext": "¿Cobertura por inhabitabilidad temporal?",
@@ -57,7 +57,7 @@
   "vistemp":"optional6",
   "tempo":"cheked",
   "temporal":" ",
-  "inhabivalue": "Value of Coverage for loss-of-use",
+  "inhabivalue": "Valor de la cobertura de inhabitabilidad temporal",
   "valuetemporal": "0",
 
   "clientetext": "¿Es cliente nuestro?",
@@ -65,7 +65,7 @@
   "client":"optional9",
   "clien":"cheked",
   "cliente":" ",
-  "customervalue":"Type of insurance engaged by the customer",
+  "customervalue":"Tipo de Seguro",
   "insuran1": "checked",
   "insuran2": "checked",
   "insuran3": "checked"
